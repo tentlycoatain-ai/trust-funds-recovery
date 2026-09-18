@@ -110,3 +110,32 @@ body { background: #F7F8FC; color: #182236; }
 .crm-content input, .crm-content select, .crm-content textarea { background: #FFF; border-color: #E0E5EE; }
 
 @media (max-width: 720px) { .section { padding-block: 4.5rem; } .brand-logo { width: 172px; } }
+
+
+/* CRM shell refinement: premium workspace chrome with deliberate hierarchy. */
+.crm-shell .crm-sidebar { background: #10182B !important; border-right: 1px solid rgba(255,255,255,.08) !important; box-shadow: 14px 0 36px rgba(10,16,32,.10); }
+.crm-shell .agent-sidebar { background: #10252A !important; }
+.crm-shell .sidebar-header { height: 70px !important; padding: 0 1.1rem !important; border-bottom-color: rgba(255,255,255,.08) !important; }
+.crm-shell .brand-badge { width: 36px !important; height: 36px !important; background: #FFF !important; border-radius: 11px !important; }
+.crm-shell .brand-badge img { width: 28px; height: 28px; }
+.crm-shell .brand-title { color: #FFF !important; font-size: .86rem !important; letter-spacing: -.015em; }
+.crm-shell .brand-sub { color: #91A4C1 !important; font-size: .62rem !important; letter-spacing: .12em !important; }
+.crm-shell .sidebar-nav { padding: 1.15rem .6rem !important; gap: .18rem !important; }
+.crm-shell .nav-group-label { padding: .95rem .75rem .45rem !important; color: #6F7E97 !important; font-size: .61rem !important; letter-spacing: .14em !important; }
+.crm-shell .nav-item { min-height: 40px; padding: .62rem .78rem !important; color: #A9B6CA !important; border-radius: 10px !important; font-size: .79rem !important; }
+.crm-shell .nav-item:hover { color: #FFF !important; background: rgba(255,255,255,.055) !important; }
+.crm-shell .nav-item.active { color: #FFF !important; background: linear-gradient(90deg, rgba(129,154,255,.20), rgba(129,154,255,.05)) !important; box-shadow: inset 2px 0 0 #83A4FF !important; }
+.crm-shell .agent-sidebar .nav-item.active { background: linear-gradient(90deg, rgba(83,196,159,.20), rgba(83,196,159,.05)) !important; box-shadow: inset 2px 0 0 #8BE1C4 !important; }
+.crm-shell .sidebar-footer { padding: .85rem .65rem !important; border-top-color: rgba(255,255,255,.08) !important; }
+.crm-shell .btn-role-switch { min-height: 38px; border-radius: 10px !important; background: rgba(225,191,121,.08) !important; border-color: rgba(225,191,121,.26) !important; color: #E1BF79 !important; }
+.crm-shell .btn-role-switch:hover { background: rgba(225,191,121,.15) !important; }
+.crm-shell .crm-topbar { height: 70px !important; padding: 0 1.25rem !important; }
+.crm-shell .topbar-right { gap: .55rem !important; }
+.crm-shell .topbar-action-btn { min-height: 36px; padding: .45rem .7rem !important; border-radius: 10px !important; border-color: #E2E7F0 !important; background: #FFF !important; font-size: .73rem !important; }
+.crm-shell .dialer-btn { color: #16704A !important; background: #F1FBF6 !important; border-color: #CBEBD9 !important; }
+.crm-shell .user-profile-menu { gap: .55rem !important; padding-left: .75rem !important; }
+.crm-shell .user-avatar { width: 32px !important; height: 32px !important; border-color: #E2E7F0 !important; }
+.crm-shell .user-name { font-size: .75rem !important; color: #182236 !important; }
+.crm-shell .user-role { font-size: .63rem !important; color: #7B879A !important; }
+.crm-shell .crm-content { padding: 1.5rem !important; }
+@media (max-width: 720px) { .crm-shell .crm-content { padding: 1rem !important; } .crm-shell .user-info { display: none; } }

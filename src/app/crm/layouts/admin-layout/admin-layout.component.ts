@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkActive, Router } from '@angular/router';
 import { AuthService } from '../../core/auth/auth.service';
 import { NotificationService } from '../../core/services/notification.service';
-import { ToastComponent } from '../../shared/components/toast/toast.component';
 import { DialerModalComponent } from '../../shared/components/dialer-modal/dialer-modal.component';
 import { VisualIconComponent } from '../../../shared/components/visual-icon/visual-icon.component';
 
@@ -15,7 +14,6 @@ import { VisualIconComponent } from '../../../shared/components/visual-icon/visu
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
-    ToastComponent,
     DialerModalComponent,
     VisualIconComponent
   ],
@@ -196,8 +194,6 @@ import { VisualIconComponent } from '../../../shared/components/visual-icon/visu
         (closed)="isDialerOpen.set(false)"
       />
 
-      <!-- Global Toast Container -->
-      <crm-toast-container />
     </div>
   `,
   styles: [`

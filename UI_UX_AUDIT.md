@@ -63,3 +63,9 @@ Validation: production build passed; unit tests passed 2/2; `svg=0`; audited ico
 After reviewing the icon migration in context, the interface was refreshed to remove the older admin-template feel. Public and CRM tokens now use a quieter near-white surface, deeper ink typography, restrained indigo and brass accents, lighter borders, softer elevation, more consistent pill actions, tighter cards, and a narrower CRM rail. The public hero retains documentary photography but now has a cleaner hierarchy and stronger editorial spacing. The CRM topbar is lighter and glassy, the sidebar is narrower, navigation has quieter active states, and cards/tables use more refined spacing and borders.
 
 Validation: production build passed; unit tests passed 2/2; public home and Admin Dashboard were visually inspected after the refresh.
+
+## CRM, favicon, cookie, and toast upgrade
+
+The CRM shell now uses the modern premium token system with a narrower rail, quieter navigation, refined active states, lighter topbar controls, and more deliberate brand spacing for both Admin and Agent workspaces. The Trust Funds Recovery mark is now the definitive SVG favicon and Apple touch icon. Toast notifications are mounted once at the application root so both public and CRM routes share the same branded success, info, warning, and error notification layer; each toast includes the brand mark and a type-specific image asset. A persistent cookie-consent popup was added at the application root with Accept all and Essential only controls, local consent storage, responsive layout, and the brand mark.
+
+Validation: production build passed; unit tests passed 2/2; live CRM shell, favicon metadata, root toast mount, and cookie-consent element were checked.
