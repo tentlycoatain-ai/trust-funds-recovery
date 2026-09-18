@@ -57,3 +57,9 @@ The generic outline treatment has been replaced in the highest-visibility public
 The full application icon audit is now complete. All inline SVG elements under `src/app` have been removed, and all emoji/text-symbol icon markers used for calls, documents, messages, checks, arrows, and close controls have been replaced with transparent image assets. The shared image vocabulary now covers currency, payment cards, warnings, coins, evidence folders, phone calls, messages, privacy, scheduling, reports, verification, forward actions, and close actions. Public pages, legal pages, CRM layouts, CRM pages, authentication screens, and shared CRM components now use real image assets for iconography.
 
 Validation: production build passed; unit tests passed 2/2; `svg=0`; audited icon emoji/text-symbol count `0`.
+
+## Premium visual refresh
+
+After reviewing the icon migration in context, the interface was refreshed to remove the older admin-template feel. Public and CRM tokens now use a quieter near-white surface, deeper ink typography, restrained indigo and brass accents, lighter borders, softer elevation, more consistent pill actions, tighter cards, and a narrower CRM rail. The public hero retains documentary photography but now has a cleaner hierarchy and stronger editorial spacing. The CRM topbar is lighter and glassy, the sidebar is narrower, navigation has quieter active states, and cards/tables use more refined spacing and borders.
+
+Validation: production build passed; unit tests passed 2/2; public home and Admin Dashboard were visually inspected after the refresh.

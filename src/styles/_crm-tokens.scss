@@ -1,34 +1,34 @@
 // Trust Funds Recovery — CRM operational theme
 :root {
-  --crm-sidebar-width: 272px;
-  --crm-sidebar-collapsed-width: 82px;
-  --crm-topbar-height: 72px;
-  --crm-sidebar-bg: #091A35;
-  --crm-sidebar-surface: #102A50;
-  --crm-sidebar-border: rgba(177, 207, 244, .14);
-  --crm-sidebar-text: #AABCD5;
+  --crm-sidebar-width: 248px;
+  --crm-sidebar-collapsed-width: 76px;
+  --crm-topbar-height: 70px;
+  --crm-sidebar-bg: #10182B;
+  --crm-sidebar-surface: #18233B;
+  --crm-sidebar-border: rgba(222, 232, 255, .10);
+  --crm-sidebar-text: #A9B6CA;
   --crm-sidebar-text-hover: #FFFFFF;
-  --crm-sidebar-text-active: #9DCCFF;
-  --crm-sidebar-active-bg: rgba(112, 183, 255, .14);
-  --crm-agent-sidebar-bg: #071F2A;
-  --crm-agent-sidebar-surface: #0D3140;
-  --crm-agent-sidebar-border: rgba(159, 231, 209, .16);
-  --crm-agent-sidebar-text-active: #8BE1C4;
+  --crm-sidebar-text-active: #FFFFFF;
+  --crm-sidebar-active-bg: rgba(129, 154, 255, .16);
+  --crm-agent-sidebar-bg: #10252A;
+  --crm-agent-sidebar-surface: #19363A;
+  --crm-agent-sidebar-border: rgba(159, 231, 209, .12);
+  --crm-agent-sidebar-text-active: #B9F0DA;
   --crm-agent-sidebar-active-bg: rgba(83, 196, 159, .14);
 
-  --crm-bg: #F5F7FB;
+  --crm-bg: #F7F8FC;
   --crm-surface: #FFFFFF;
   --crm-surface-2: #F8FAFD;
   --crm-card-bg: #FFFFFF;
-  --crm-border: #D9E2F0;
-  --crm-border-subtle: #E8EEF6;
-  --crm-text-primary: #10213D;
-  --crm-text-secondary: #465775;
-  --crm-text-muted: #687994;
-  --crm-accent: #2068C4;
-  --crm-primary: #2068C4;
-  --crm-primary-hover: #174C96;
-  --crm-primary-light: #EEF6FF;
+  --crm-border: #E2E7F0;
+  --crm-border-subtle: #EDF0F5;
+  --crm-text-primary: #182236;
+  --crm-text-secondary: #59677D;
+  --crm-text-muted: #7B879A;
+  --crm-accent: #315BCE;
+  --crm-primary: #315BCE;
+  --crm-primary-hover: #2346B8;
+  --crm-primary-light: #F3F6FF;
 
   --crm-status-new: #175BA8;
   --crm-status-new-bg: #EEF6FF;

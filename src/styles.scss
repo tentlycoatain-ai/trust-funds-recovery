@@ -60,3 +60,53 @@ img, video { display: block; max-width: 100%; } button, input, select, textarea 
 
 @media (max-width: 720px) { .section { padding-block: 4rem; }.btn-lg { width: 100%; }.crm-content { padding: 1rem !important; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+
+
+/* Premium interface refresh: quieter surfaces, sharper hierarchy, and less template-like chrome. */
+body { background: #F7F8FC; color: #182236; }
+.container { padding-inline: clamp(1.25rem, 4vw, 2.5rem); }
+.section { padding-block: clamp(5rem, 10vw, 8.5rem); }
+.btn { min-height: 46px; border-radius: 999px; letter-spacing: -.01em; box-shadow: none; }
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: #315BCE; box-shadow: 0 10px 24px rgba(49, 91, 206, .20); }
+.btn-primary:hover { background: #2346B8; box-shadow: 0 14px 30px rgba(49, 91, 206, .24); }
+.btn-gold { color: #19223A; background: #E1BF79; box-shadow: 0 10px 24px rgba(197, 154, 82, .18); }
+.btn-secondary { background: rgba(255,255,255,.84); border-color: #DDE3EE; }
+.card { border-radius: 18px; box-shadow: 0 8px 26px rgba(22, 34, 59, .055); }
+.real-icon-inline { width: .82rem; height: .82rem; filter: none; }
+.btn .real-icon-inline, .nav-item .real-icon-inline, .topbar-action-btn .real-icon-inline, .icon-btn .real-icon-inline { width: 1rem; height: 1rem; }
+.close-btn .real-icon-inline { width: .82rem; height: .82rem; }
+
+/* Landing page surfaces */
+.header { height: var(--header-height); background: rgba(10, 16, 32, .18); backdrop-filter: blur(18px) saturate(130%); }
+.header.is-scrolled { background: rgba(10, 16, 32, .82); border-bottom-color: rgba(255,255,255,.11); box-shadow: 0 10px 28px rgba(5, 12, 28, .16); }
+.brand-logo { width: 184px; }
+.nav-list { gap: clamp(.8rem, 1.7vw, 1.6rem); }
+.nav-link { font-size: .82rem; letter-spacing: .01em; }
+.hero-section { min-height: min(760px, 92svh); }
+.hero-headline { font-size: clamp(3.1rem, 6vw, 5.35rem); letter-spacing: -.07em; }
+.hero-scrim { background: linear-gradient(90deg, rgba(7,13,28,.93) 0%, rgba(7,13,28,.77) 41%, rgba(7,13,28,.24) 78%, rgba(7,13,28,.10) 100%), linear-gradient(0deg, rgba(7,13,28,.56), transparent 48%); }
+.trust-section, .how-it-works-section { background: #F7F8FC; }
+.trust-grid, .services-grid, .why-us-section .why-grid { gap: 1.15rem; }
+.trust-card, .service-card { border: 1px solid #E2E7F0; border-radius: 18px; box-shadow: 0 8px 24px rgba(22,34,59,.045); }
+.trust-card:hover, .service-card:hover { transform: translateY(-3px); border-color: #C7D3EC; box-shadow: 0 16px 34px rgba(22,34,59,.09); }
+.trust-card .trust-icon { width: 42px; height: 42px; border-radius: 13px; }
+.service-card { padding: 1.7rem; }
+.service-card-header .service-icon-box { width: 50px; height: 50px; border-radius: 14px; }
+.service-card-header .service-icon-box app-visual-icon { width: 34px; height: 34px; }
+.editorial-strip { background: #F0F2F6; }
+.section-header h2 { letter-spacing: -.055em; }
+
+/* CRM surfaces */
+.crm-sidebar { box-shadow: 12px 0 30px rgba(10,16,32,.08); }
+.crm-topbar { background: rgba(255,255,255,.88) !important; border-bottom-color: #E7EAF0 !important; box-shadow: 0 8px 24px rgba(18,31,53,.045) !important; backdrop-filter: blur(18px); }
+.crm-content { background: radial-gradient(680px circle at 100% 0%, rgba(75,120,237,.07), transparent 54%), #F7F8FC; }
+.nav-item { border-radius: 10px !important; margin-inline: .65rem !important; }
+.nav-item.active { box-shadow: inset 3px 0 0 #83A4FF; }
+.nav-item app-visual-icon { width: 1rem; height: 1rem; }
+.crm-content .card, .crm-content .panel, .crm-content .stat-card, .crm-content .dashboard-card { border-radius: 16px !important; box-shadow: 0 8px 24px rgba(22,34,59,.045) !important; border-color: #E2E7F0 !important; }
+.crm-content table { border-color: #E2E7F0; }
+.crm-content table th { background: #FAFBFD; color: #7B879A; font-size: .68rem; letter-spacing: .10em; text-transform: uppercase; }
+.crm-content input, .crm-content select, .crm-content textarea { background: #FFF; border-color: #E0E5EE; }
+
+@media (max-width: 720px) { .section { padding-block: 4.5rem; } .brand-logo { width: 172px; } }
