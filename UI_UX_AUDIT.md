@@ -43,3 +43,7 @@ The temporary public preview host was added to Angular's serve configuration and
 ## Photography revision
 
 The first visual pass was intentionally replaced after review. The landing page no longer relies on the abstract generated hero video/poster treatment. It now uses a grounded editorial photography system: a client-and-advisor consultation in the hero, a document-review desk image for evidence work, and a human client meeting image for the methodology story. The treatment uses restrained crops, natural light, lived-in office details, and less decorative overlay so the service feels credible and human rather than synthetic or futuristic.
+
+## Public-page photography rollout
+
+The editorial photography system has now been extended across every primary public landing page. About uses a multidisciplinary team review, Services uses transaction-analysis work, How It Works uses a document-roadmap scene, Resources uses a practical reading scene, and Contact uses a human intake-coordinator scene. Each hero has descriptive alternative text, page-specific image composition, a dark readable overlay, and preserved navigation/CTA behavior. Legal pages remain intentionally content-first rather than promotional landing pages.
