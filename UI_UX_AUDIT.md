@@ -69,3 +69,9 @@ Validation: production build passed; unit tests passed 2/2; public home and Admi
 The CRM shell now uses the modern premium token system with a narrower rail, quieter navigation, refined active states, lighter topbar controls, and more deliberate brand spacing for both Admin and Agent workspaces. The Trust Funds Recovery mark is now the definitive SVG favicon and Apple touch icon. Toast notifications are mounted once at the application root so both public and CRM routes share the same branded success, info, warning, and error notification layer; each toast includes the brand mark and a type-specific image asset. A persistent cookie-consent popup was added at the application root with Accept all and Essential only controls, local consent storage, responsive layout, and the brand mark.
 
 Validation: production build passed; unit tests passed 2/2; live CRM shell, favicon metadata, root toast mount, and cookie-consent element were checked.
+
+## Organization-ready CRM alignment pass
+
+A CRM-wide usability pass standardized the geometry of the operational interface rather than changing isolated screens one by one. Admin and Agent pages now share consistent maximum content width, page-header alignment, title scale, button height, action spacing, table row rhythm, header casing, form control height, modal treatment, card radius, and responsive behavior. Data tables keep their minimum readable width and scroll horizontally on smaller screens instead of collapsing text into unusable columns. Buttons and links now align to common interaction sizes, while empty states, filters, tabs, status rows, and form labels follow the same hierarchy. The Agent greeting was also cleaned of its casual emoji to maintain a professional organizational tone.
+
+Live checks covered the Admin dashboard, Admin Customer Directory, and Agent Dashboard. Production build and unit tests passed after the alignment pass.

@@ -30,7 +30,7 @@ import { DialerModalComponent } from '../../../shared/components/dialer-modal/di
       <!-- Agent Greeting Header -->
       <div class="greeting-header">
         <div>
-          <h2>Welcome back, {{ currentUser()?.name || 'Marcus' }} 👋</h2>
+          <h2>Welcome back, {{ currentUser()?.name || 'Marcus' }}</h2>
           <p class="subtitle">Here is your daily recovery pipeline, urgent court dates, and claimant calls schedule.</p>
         </div>
         <button class="btn-dialer-quick" (click)="isDialerOpen.set(true)">
