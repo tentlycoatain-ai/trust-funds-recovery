@@ -1,21 +1,7 @@
 <!-- HERO SECTION -->
 <section class="hero-section" aria-labelledby="hero-heading">
-  <video
-    class="hero-background-video"
-    [class.is-hidden]="heroVideoFailed()"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="metadata"
-    poster="/assets/media/financial-recovery-hero-poster.svg"
-    (error)="onHeroVideoError()"
-    aria-hidden="true">
-    <source src="/assets/media/financial-recovery-hero.mp4" type="video/mp4" />
-  </video>
-  <div class="hero-fallback" [class.is-visible]="heroVideoFailed()" aria-hidden="true"></div>
+  <img class="hero-background-image" src="/assets/media/tfr-hero-consultation.jpg" alt="A client reviewing financial documents with a recovery advisor" />
   <div class="hero-scrim" aria-hidden="true"></div>
-  <div class="hero-grid" aria-hidden="true"></div>
 
   <div class="container hero-container">
     <div class="hero-content">
@@ -48,9 +34,9 @@
       </div>
     </div>
 
-    <div class="hero-media-note animate-fade-in-up" aria-label="Hero media notice">
+    <div class="hero-media-note animate-fade-in-up" aria-label="Hero image caption">
       <span class="media-note-line"></span>
-      <span>Secure, considered, human</span>
+      <span>Clarity begins with a conversation</span>
     </div>
   </div>
 </section>
@@ -121,6 +107,20 @@
           You work directly with an assigned dispute coordinator who navigates communication updates, deadline tracking, and institutional responses from start to finish.
         </p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="editorial-strip" aria-label="Evidence-led casework">
+  <div class="container editorial-strip-grid">
+    <figure class="editorial-photo editorial-photo-wide">
+      <img src="/assets/media/tfr-evidence-desk.jpg" alt="A desk with financial correspondence, a notebook, and a magnifying glass" loading="lazy" />
+    </figure>
+    <div class="editorial-strip-copy">
+      <span class="badge badge-gold">The work behind the advice</span>
+      <h2>Good recovery work starts with the details.</h2>
+      <p>We turn scattered correspondence, statements, and timelines into a clear record that people can understand and act on.</p>
+      <a routerLink="/how-it-works" class="link-with-arrow">See how the review works <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -272,7 +272,8 @@
       <div class="story-media">
         <div class="story-video-card" (click)="openVideoModal('The Trust Funds Recovery Methodology', 'How we compile evidence and coordinate institutional recovery outreach.')">
           <div class="story-poster-art">
-            <div class="radar-scan"></div>
+            <img src="/assets/media/tfr-client-meeting.jpg" alt="A client and case coordinator reviewing documents together" loading="lazy" />
+            <div class="story-poster-wash"></div>
             <div class="play-trigger">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF">
                 <polygon points="5 3 19 12 5 21 5 3"></polygon>

@@ -28,7 +28,6 @@ import { CtaBannerComponent } from '../../../shared/components/cta-banner/cta-ba
 export class HomeComponent implements OnInit {
   private readonly seo = inject(SeoService);
 
-  heroVideoFailed = signal<boolean>(false);
   isVideoModalOpen = signal<boolean>(false);
   modalVideoTitle = signal<string>('How Trust Funds Recovery Manages Complex Cases');
   modalVideoSubtitle = signal<string>('An in-depth look at our forensic assessment, document assembly, and structured dispute protocols.');
@@ -206,10 +205,6 @@ export class HomeComponent implements OnInit {
       description: 'Trust Funds Recovery provides transparent, structured forensic assessment and assistance for complex financial disputes, unauthorized transfers, and asset tracing.',
       keywords: 'financial recovery, fund tracing, unauthorized transaction assistance, investment disputes, forensic case assessment'
     });
-  }
-
-  onHeroVideoError(): void {
-    this.heroVideoFailed.set(true);
   }
 
   openVideoModal(title?: string, subtitle?: string): void {

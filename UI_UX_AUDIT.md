@@ -8,7 +8,7 @@ The existing repository is an Angular 22 standalone-component application. Its r
 
 | Area | Current implementation | Preservation requirement |
 | --- | --- | --- |
-| Public website | Home, About, Services, How It Works, Resources, Contact, and nested legal routes; global header/footer; shared FAQ, CTA, service, timeline, testimonial, and video-modal components | Retain all content paths and CTA behavior while unifying visual identity and hero media treatment. |
+| Public website | Home, About, Services, How It Works, Resources, Contact, and nested legal routes; global header/footer; shared FAQ, CTA, service, timeline, testimonial, and video-modal components | Retain all content paths and CTA behavior while unifying visual identity and a grounded photography treatment. |
 | Admin CRM | Protected `admin` layout with dashboard, customers, leads, cases, tasks, calls, dialer, payments, documents, communications, activity, reports, notifications, settings, profile, and audit logs | Retain routes, auth guard, operational information, notifications, and quick dialer behavior. |
 | Agent CRM | Protected `agent` layout with dashboard, leads, customers, cases, tasks, dialer, calls, documents, notifications, and profile | Retain focused workflows and role separation. |
 | Privacy controls | Shared `crm-phone-display` always masks actual customer phone data for Agent users and exposes only a dial launch action | This must remain intact across all visual changes. |
@@ -16,7 +16,7 @@ The existing repository is an Angular 22 standalone-component application. Its r
 
 ## Visual observations
 
-The public home page already presents a coherent dark-navy/blue/gold direction, strong content hierarchy, and a rich set of functional sections. Its hero currently uses a two-column layout with a simulated video card rather than the required full-viewport background video. This is the primary public-page visual gap to correct. The current logo is an inline generic shield; a distinct, reusable vector mark should replace it in public, CRM, and authentication contexts.
+The public home page already presents a coherent dark-navy/blue/gold direction, strong content hierarchy, and a rich set of functional sections. Its earlier hero direction relied too heavily on abstract media and decorative effects, which made the experience feel synthetic. The primary visual correction is a more human, editorial photo system with real-world office context and useful negative space for copy. The current logo is an inline generic shield; a distinct, reusable vector mark should replace it in public, CRM, and authentication contexts.
 
 The Admin sign-in view is functional and legible but is visually sparse, with a small centered white card on a dark background. It should inherit the new brand mark, surface treatment, focus states, and secure-operation cues without inventing trust claims or changing login behavior.
 
@@ -30,7 +30,7 @@ The new system will use an ownable monogram based on an abstract **T/F** continu
 
 ## Implementation validation
 
-The redesigned public home page now uses a local, muted, looping 16:9 MP4 as a full-viewport background video, with a local SVG poster fallback and a clear replacement note for an approved client-owned film. The hero is no longer a two-column simulated-video card; it uses a readable dark overlay, central brand hierarchy, restrained motion, and a no-guarantee boundary statement. The production Angular build completed successfully, and the live browser console reported only the expected Angular development-mode log with no page errors.
+The redesigned public home page now uses a full-viewport consultation photograph with an accessible text alternative, a readable dark overlay, central brand hierarchy, restrained motion, and a no-guarantee boundary statement. The production Angular build completed successfully, and the live browser console reported only the expected Angular development-mode log with no page errors.
 
 The new local brand system includes light/dark wordmarks, an icon-only mark, browser favicon reference, and centralized Sass design tokens for brand, semantic, spacing, typography, geometry, shadow, and motion values. The Resources route is now registered, and footer legal links correctly target the existing nested legal routes.
 
@@ -38,4 +38,8 @@ The live Agent and Admin CRM screens were also checked after the system upgrade.
 
 The repaired `/resources` route was opened in the live application and rendered the existing Knowledge Center content correctly with the redesigned shared header, visual language, and footer. A follow-up console check again returned only the standard Angular development-mode log and no browser errors.
 
-The temporary public preview host was added to Angular's serve configuration and verified through both local and public HTTP checks. The public URL now renders the redesigned home experience correctly, including the local background media, new logo treatment, navigation, and content hierarchy.
+The temporary public preview host was added to Angular's serve configuration and verified through both local and public HTTP checks. The public URL now renders the redesigned home experience correctly, including the consultation hero image, editorial evidence band, client-meeting story image, new logo treatment, navigation, and content hierarchy.
+
+## Photography revision
+
+The first visual pass was intentionally replaced after review. The landing page no longer relies on the abstract generated hero video/poster treatment. It now uses a grounded editorial photography system: a client-and-advisor consultation in the hero, a document-review desk image for evidence work, and a human client meeting image for the methodology story. The treatment uses restrained crops, natural light, lived-in office details, and less decorative overlay so the service feels credible and human rather than synthetic or futuristic.
