@@ -12,11 +12,7 @@ import { AuthService } from '../../core/auth/auth.service';
     <div class="login-wrapper">
       <div class="login-card">
         <div class="brand-header">
-          <div class="logo-mark">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
+          <div class="logo-mark"><img src="/assets/brand/tfr-mark.svg" alt="Trust Funds Recovery" /></div>
           <h2>Admin Portal</h2>
           <p>Trust Funds Recovery Management System</p>
         </div>

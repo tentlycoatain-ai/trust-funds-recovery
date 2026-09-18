@@ -1,0 +1,18 @@
+<svg width="332" height="84" viewBox="0 0 332 84" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Trust Funds Recovery</title>
+  <desc id="desc">Trust Funds Recovery logo for light surfaces</desc>
+  <defs>
+    <linearGradient id="ink" x1="8" y1="6" x2="72" y2="76" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#174C96"/><stop offset="1" stop-color="#0B1D3A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="32" y1="18" x2="58" y2="62" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#70B7FF"/><stop offset="1" stop-color="#C7974D"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="80" height="80" rx="23" fill="url(#ink)"/>
+  <path d="M25 24H59" stroke="white" stroke-width="7" stroke-linecap="round"/><path d="M42 24V61" stroke="white" stroke-width="7" stroke-linecap="round"/>
+  <path d="M42 43H60" stroke="url(#accent)" stroke-width="7" stroke-linecap="round"/><path d="M42 61L60 43" stroke="url(#accent)" stroke-width="7" stroke-linecap="round"/>
+  <rect x="2.75" y="2.75" width="78.5" height="78.5" rx="22.25" stroke="white" stroke-opacity=".18" stroke-width="1.5"/>
+  <text x="101" y="36" fill="#0B1D3A" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" letter-spacing="2.2">TRUST FUNDS</text>
+  <text x="103" y="60" fill="#8C642D" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="5.25">RECOVERY</text>
+</svg>

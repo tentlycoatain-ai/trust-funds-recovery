@@ -23,11 +23,7 @@ import { DialerModalComponent } from '../../shared/components/dialer-modal/diale
       <aside class="crm-sidebar">
         <!-- Sidebar Brand -->
         <div class="sidebar-header">
-          <div class="brand-badge">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
+          <div class="brand-badge"><img src="/assets/brand/tfr-mark.svg" alt="" /></div>
           @if (!isSidebarCollapsed()) {
             <div class="brand-text">
               <span class="brand-title">Trust Recovery</span>

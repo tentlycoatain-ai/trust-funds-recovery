@@ -6,6 +6,7 @@ import { ContactComponent } from './pages/public/contact/contact.component';
 import { HowItWorksComponent } from './pages/public/how-it-works/how-it-works.component';
 import { ServicesComponent } from './pages/public/services/services.component';
 import { LegalComponent } from './pages/public/legal/legal.component';
+import { ResourcesComponent } from './pages/public/resources/resources.component';
 import { PrivacyPolicyComponent } from './pages/public/legal/privacy-policy/privacy-policy.component';
 import { TermsComponent } from './pages/public/legal/terms/terms.component';
 import { DisclaimerComponent } from './pages/public/legal/disclaimer/disclaimer.component';
@@ -64,6 +65,7 @@ export const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'resources', component: ResourcesComponent },
   { path: 'how-it-works', component: HowItWorksComponent },
   {
     path: 'legal',
