@@ -111,7 +111,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
         <div class="table-card">
           <div class="card-header-flex">
             <h3>Recent Recovery Cases</h3>
-            <a routerLink="/admin/cases" class="view-all-link">View all cases →</a>
+            <a routerLink="/admin/cases" class="view-all-link">View all cases <img class="real-icon real-icon-inline" src="/assets/icons/forward-card.png" alt="" aria-hidden="true" /></a>
           </div>
 
           <div class="table-responsive">
@@ -154,7 +154,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
         <div class="tasks-card">
           <div class="card-header-flex">
             <h3>Urgent Priorities & Tasks</h3>
-            <a routerLink="/admin/tasks" class="view-all-link">All tasks →</a>
+            <a routerLink="/admin/tasks" class="view-all-link">All tasks <img class="real-icon real-icon-inline" src="/assets/icons/forward-card.png" alt="" aria-hidden="true" /></a>
           </div>
 
           <div class="task-items-list">
@@ -162,7 +162,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
               <div class="task-row" [class.completed]="task.status === 'completed'">
                 <div class="task-checkbox" (click)="toggleTask(task.id)">
                   @if (task.status === 'completed') {
-                    <span class="checked-icon">✓</span>
+                    <span class="checked-icon"><img class="real-icon real-icon-inline" src="/assets/icons/verified-stamp.png" alt="" aria-hidden="true" /></span>
                   }
                 </div>
                 <div class="task-info">

@@ -10,13 +10,16 @@ import { ToastService } from '../../services/toast.service';
     <div class="toast-container">
       @for (toast of toastService.toasts(); track toast.id) {
         <div class="toast-item" [ngClass]="'toast-' + toast.type">
+          <img class="toast-brand" src="/assets/brand/tfr-mark.svg" alt="Trust Funds Recovery" />
           <div class="toast-icon">
             @if (toast.type === 'success') {
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <img class="real-icon real-icon-inline" src="/assets/icons/verified-stamp.png" alt="" aria-hidden="true" />
             } @else if (toast.type === 'error') {
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              <img class="real-icon real-icon-inline" src="/assets/icons/warning-file.png" alt="" aria-hidden="true" />
+            } @else if (toast.type === 'warning') {
+              <img class="real-icon real-icon-inline" src="/assets/icons/calendar-desk.png" alt="" aria-hidden="true" />
             } @else {
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <img class="real-icon real-icon-inline" src="/assets/icons/document-folder.png" alt="" aria-hidden="true" />
             }
           </div>
           <div class="toast-content">
@@ -25,7 +28,7 @@ import { ToastService } from '../../services/toast.service';
             }
             <span class="toast-message">{{ toast.message }}</span>
           </div>
-          <button class="toast-close" (click)="toastService.remove(toast.id)">✕</button>
+          <button class="toast-close" (click)="toastService.remove(toast.id)"><img class="real-icon real-icon-inline" src="/assets/icons/close-seal.png" alt="" aria-hidden="true" /></button>
         </div>
       }
     </div>
@@ -33,53 +36,57 @@ import { ToastService } from '../../services/toast.service';
   styles: [`
     .toast-container {
       position: fixed;
-      bottom: 1.5rem;
-      right: 1.5rem;
-      z-index: 2000;
+      top: 1.25rem;
+      right: 1.25rem;
+      z-index: 2300;
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
       pointer-events: none;
-      max-width: 380px;
+      max-width: 420px;
       width: 100%;
     }
     .toast-item {
       pointer-events: auto;
-      background: #0F172A;
+      background: rgba(17, 26, 46, .97);
       color: #FFFFFF;
-      border-radius: 10px;
-      padding: 0.85rem 1rem;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      padding: .85rem 1rem .85rem .85rem;
       display: flex;
       align-items: flex-start;
       gap: 0.75rem;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-      animation: slideIn 220ms ease;
-      border-left: 4px solid #38BDF8;
+      box-shadow: 0 18px 48px rgba(10,16,32,.24);
+      animation: slideIn 260ms cubic-bezier(.16,1,.3,1);
+      border-left: 3px solid #83A4FF;
 
       &.toast-success {
-        border-left-color: #10B981;
-        .toast-icon { color: #34D399; }
+        border-left-color: #43C38B;
       }
       &.toast-error {
-        border-left-color: #EF4444;
-        .toast-icon { color: #F87171; }
+        border-left-color: #E47C83;
       }
       &.toast-warning {
-        border-left-color: #F59E0B;
-        .toast-icon { color: #FBBF24; }
+        border-left-color: #E1BF79;
       }
       &.toast-info {
-        border-left-color: #3B82F6;
-        .toast-icon { color: #60A5FA; }
+        border-left-color: #83A4FF;
       }
     }
     @keyframes slideIn {
       from { transform: translateY(12px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
+    .toast-brand { width: 28px; height: 28px; flex: 0 0 auto; padding: 5px; background: #FFF; border-radius: 9px; }
     .toast-icon {
       flex-shrink: 0;
-      margin-top: 2px;
+      width: 22px;
+      height: 22px;
+      margin-top: 3px;
+      display: grid;
+      place-items: center;
+      border-radius: 7px;
+      background: rgba(255,255,255,.08);
     }
     .toast-content {
       flex: 1;
@@ -90,15 +97,15 @@ import { ToastService } from '../../services/toast.service';
     .toast-title {
       font-size: 0.875rem;
       font-weight: 600;
-      color: #F8FAFC;
+      color: #FFFFFF;
     }
     .toast-message {
       font-size: 0.8125rem;
-      color: #CBD5E1;
+      color: #B8C3D5;
       line-height: 1.4;
     }
     .toast-close {
-      color: #94A3B8;
+      color: #AAB6C9;
       background: none;
       border: none;
       font-size: 0.875rem;
@@ -106,6 +113,7 @@ import { ToastService } from '../../services/toast.service';
       margin-left: 0.25rem;
       &:hover { color: #FFFFFF; }
     }
+    @media (max-width: 560px) { .toast-container { top: .75rem; right: .75rem; left: .75rem; max-width: none; } }
   `]
 })
 export class ToastComponent {

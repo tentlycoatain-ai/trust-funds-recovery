@@ -36,9 +36,7 @@ import { ToastService } from '../../../shared/services/toast.service';
       <!-- Filters Bar -->
       <div class="filters-card">
         <div class="search-input-box">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-          </svg>
+          <img class="real-icon real-icon-inline" src="/assets/icons/coin-stack.png" alt="" aria-hidden="true" />
           <input
             type="text"
             [(ngModel)]="searchQuery"
@@ -150,7 +148,7 @@ import { ToastService } from '../../../shared/services/toast.service';
           <div class="modal-card" (click)="$event.stopPropagation()">
             <div class="modal-header">
               <h3>Create New Customer</h3>
-              <button class="close-btn" (click)="isCreateModalOpen.set(false)">✕</button>
+              <button class="close-btn" (click)="isCreateModalOpen.set(false)"><img class="real-icon real-icon-inline" src="/assets/icons/close-seal.png" alt="" aria-hidden="true" /></button>
             </div>
             <form (ngSubmit)="submitCreateCustomer()" class="modal-form">
               <div class="form-row">

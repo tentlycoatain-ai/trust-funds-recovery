@@ -23,7 +23,7 @@ import { DialerModalComponent } from '../../../shared/components/dialer-modal/di
           <p class="subtitle">Complete record of claimant contact attempts, durations, and recorded outcomes.</p>
         </div>
         <button class="btn-dialer" (click)="isDialerOpen.set(true)">
-          📞 Launch Dialer
+          <img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" /> Launch Dialer
         </button>
       </div>
 

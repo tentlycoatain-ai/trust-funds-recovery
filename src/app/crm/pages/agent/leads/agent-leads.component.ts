@@ -76,10 +76,10 @@ import { ToastService } from '../../../shared/services/toast.service';
 
             <div class="card-actions">
               <button class="btn-dial" (click)="dialLead(lead)">
-                📞 Connect Call
+                <img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" /> Connect Call
               </button>
               <button class="btn-advance" (click)="advanceLead(lead)">
-                Advance Stage →
+                Advance Stage <img class="real-icon real-icon-inline" src="/assets/icons/forward-card.png" alt="" aria-hidden="true" />
               </button>
             </div>
           </div>

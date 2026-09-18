@@ -51,7 +51,7 @@ import { ToastService } from '../../../shared/services/toast.service';
                 <tr [class.completed-row]="t.status === 'completed'">
                   <td>
                     <div class="checkbox" (click)="toggleTask(t.id)">
-                      @if (t.status === 'completed') { ✓ }
+                      @if (t.status === 'completed') { <img class="real-icon real-icon-inline" src="/assets/icons/verified-stamp.png" alt="" aria-hidden="true" /> }
                     </div>
                   </td>
                   <td>
@@ -90,7 +90,7 @@ import { ToastService } from '../../../shared/services/toast.service';
           <div class="modal-card" (click)="$event.stopPropagation()">
             <div class="modal-header">
               <h3>Create New Task</h3>
-              <button class="close-btn" (click)="isCreateModalOpen.set(false)">✕</button>
+              <button class="close-btn" (click)="isCreateModalOpen.set(false)"><img class="real-icon real-icon-inline" src="/assets/icons/close-seal.png" alt="" aria-hidden="true" /></button>
             </div>
             <form (ngSubmit)="submitCreateTask()" class="modal-form">
               <div class="form-group">

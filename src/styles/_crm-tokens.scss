@@ -1,48 +1,45 @@
-// ─── CRM Specific Design Tokens ──────────────────────────────────────────────
+// Trust Funds Recovery — CRM operational theme
 :root {
-  // Layout Dimensions
-  --crm-sidebar-width: 260px;
+  --crm-sidebar-width: 248px;
   --crm-sidebar-collapsed-width: 76px;
-  --crm-topbar-height: 64px;
+  --crm-topbar-height: 70px;
+  --crm-sidebar-bg: #10182B;
+  --crm-sidebar-surface: #18233B;
+  --crm-sidebar-border: rgba(222, 232, 255, .10);
+  --crm-sidebar-text: #A9B6CA;
+  --crm-sidebar-text-hover: #FFFFFF;
+  --crm-sidebar-text-active: #FFFFFF;
+  --crm-sidebar-active-bg: rgba(129, 154, 255, .16);
+  --crm-agent-sidebar-bg: #10252A;
+  --crm-agent-sidebar-surface: #19363A;
+  --crm-agent-sidebar-border: rgba(159, 231, 209, .12);
+  --crm-agent-sidebar-text-active: #B9F0DA;
+  --crm-agent-sidebar-active-bg: rgba(83, 196, 159, .14);
 
-  // Sidebar Theme (Deep Slate / Dark Navy)
-  --crm-sidebar-bg: #0F172A;
-  --crm-sidebar-surface: #1E293B;
-  --crm-sidebar-border: #334155;
-  --crm-sidebar-text: #94A3B8;
-  --crm-sidebar-text-hover: #F8FAFC;
-  --crm-sidebar-text-active: #38BDF8;
-  --crm-sidebar-active-bg: rgba(56, 189, 248, 0.12);
-
-  // Agent Theme Variant (Teal / Deep Charcoal Accent)
-  --crm-agent-sidebar-bg: #111827;
-  --crm-agent-sidebar-surface: #1F2937;
-  --crm-agent-sidebar-border: #374151;
-  --crm-agent-sidebar-text-active: #34D399;
-  --crm-agent-sidebar-active-bg: rgba(52, 211, 153, 0.12);
-
-  // Content Area
-  --crm-bg: #F8FAFC;
+  --crm-bg: #F7F8FC;
+  --crm-surface: #FFFFFF;
+  --crm-surface-2: #F8FAFD;
   --crm-card-bg: #FFFFFF;
-  --crm-border: #E2E8F0;
-  --crm-border-subtle: #F1F5F9;
+  --crm-border: #E2E7F0;
+  --crm-border-subtle: #EDF0F5;
+  --crm-text-primary: #182236;
+  --crm-text-secondary: #59677D;
+  --crm-text-muted: #7B879A;
+  --crm-accent: #315BCE;
+  --crm-primary: #315BCE;
+  --crm-primary-hover: #2346B8;
+  --crm-primary-light: #F3F6FF;
 
-  // Accents
-  --crm-primary: #2563EB;
-  --crm-primary-hover: #1D4ED8;
-  --crm-primary-light: #EFF6FF;
-
-  // Status Colors
-  --crm-status-new: #3B82F6;
-  --crm-status-new-bg: #EFF6FF;
-  --crm-status-review: #F59E0B;
-  --crm-status-review-bg: #FFFBEB;
-  --crm-status-progress: #8B5CF6;
-  --crm-status-progress-bg: #F5F3FF;
-  --crm-status-completed: #10B981;
-  --crm-status-completed-bg: #ECFDF5;
-  --crm-status-urgent: #EF4444;
-  --crm-status-urgent-bg: #FEF2F2;
-  --crm-status-hold: #6B7280;
-  --crm-status-hold-bg: #F3F4F6;
+  --crm-status-new: #175BA8;
+  --crm-status-new-bg: #EEF6FF;
+  --crm-status-review: #9D630B;
+  --crm-status-review-bg: #FFF6DF;
+  --crm-status-progress: #6A45B6;
+  --crm-status-progress-bg: #F4F0FF;
+  --crm-status-completed: #16704A;
+  --crm-status-completed-bg: #EAF8F0;
+  --crm-status-urgent: #B73745;
+  --crm-status-urgent-bg: #FFF0F1;
+  --crm-status-hold: #596B83;
+  --crm-status-hold-bg: #F0F3F7;
 }

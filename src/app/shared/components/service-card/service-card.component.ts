@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { VisualIconComponent } from '../visual-icon/visual-icon.component';
 
 export interface ServiceItem {
   id: string;
@@ -14,7 +15,7 @@ export interface ServiceItem {
 @Component({
   selector: 'app-service-card',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, VisualIconComponent],
   templateUrl: './service-card.component.html',
   styleUrls: ['./service-card.component.scss']
 })

@@ -81,7 +81,7 @@ import { ToastService } from '../../../shared/services/toast.service';
           <div class="modal-card" (click)="$event.stopPropagation()">
             <div class="modal-header">
               <h3>Record New Disbursement</h3>
-              <button class="close-btn" (click)="isCreateModalOpen.set(false)">✕</button>
+              <button class="close-btn" (click)="isCreateModalOpen.set(false)"><img class="real-icon real-icon-inline" src="/assets/icons/close-seal.png" alt="" aria-hidden="true" /></button>
             </div>
             <form (ngSubmit)="submitCreatePayment()" class="modal-form">
               <div class="form-row">

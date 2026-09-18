@@ -34,9 +34,7 @@ import { ToastService } from '../../../shared/services/toast.service';
       <!-- Filters & Search -->
       <div class="filters-bar">
         <div class="search-box">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-          </svg>
+          <img class="real-icon real-icon-inline" src="/assets/icons/coin-stack.png" alt="" aria-hidden="true" />
           <input type="text" [(ngModel)]="searchQuery" placeholder="Search by case #, customer, jurisdiction..." class="search-input" />
         </div>
 
@@ -63,7 +61,7 @@ import { ToastService } from '../../../shared/services/toast.service';
 
             <h3 class="case-title">{{ item.title }}</h3>
             <div class="customer-row">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <img class="real-icon real-icon-inline" src="/assets/icons/coin-stack.png" alt="" aria-hidden="true" />
               <span>{{ item.customerName }}</span>
             </div>
 
@@ -102,9 +100,7 @@ import { ToastService } from '../../../shared/services/toast.service';
           </div>
         } @empty {
           <div class="empty-state">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
-            </svg>
+            <img class="real-icon real-icon-inline" src="/assets/icons/coin-stack.png" alt="" aria-hidden="true" />
             <p>No assigned cases found matching filter.</p>
           </div>
         }

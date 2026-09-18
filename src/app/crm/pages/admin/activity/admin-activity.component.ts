@@ -25,9 +25,7 @@ import { ActivityEvent, ActivityType } from '../../../core/models/activity.model
       <!-- Filters -->
       <div class="filters-row">
         <div class="search-box">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-          </svg>
+          <img class="real-icon real-icon-inline" src="/assets/icons/chart-report.png" alt="" aria-hidden="true" />
           <input type="text" [(ngModel)]="searchQuery" placeholder="Filter by action, user or details..." class="search-input" />
         </div>
 
@@ -52,22 +50,22 @@ import { ActivityEvent, ActivityType } from '../../../core/models/activity.model
             <div class="timeline-badge" [class]="'type-' + item.type">
               @switch (item.type) {
                 @case ('case') {
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  <img class="real-icon real-icon-inline" src="/assets/icons/chart-report.png" alt="" aria-hidden="true" />
                 }
                 @case ('customer') {
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <img class="real-icon real-icon-inline" src="/assets/icons/chart-report.png" alt="" aria-hidden="true" />
                 }
                 @case ('payment') {
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                  <img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" />
                 }
                 @case ('call') {
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3"/></svg>
+                  <img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" />
                 }
                 @case ('task') {
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  <img class="real-icon real-icon-inline" src="/assets/icons/chart-report.png" alt="" aria-hidden="true" />
                 }
                 @default {
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  <img class="real-icon real-icon-inline" src="/assets/icons/chart-report.png" alt="" aria-hidden="true" />
                 }
               }
             </div>
@@ -94,9 +92,7 @@ import { ActivityEvent, ActivityType } from '../../../core/models/activity.model
           </div>
         } @empty {
           <div class="empty-state">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/>
-            </svg>
+            <img class="real-icon real-icon-inline" src="/assets/icons/chart-report.png" alt="" aria-hidden="true" />
             <p>No activity records matching your criteria</p>
           </div>
         }

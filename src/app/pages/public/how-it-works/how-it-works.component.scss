@@ -1,11 +1,20 @@
 .page-hero {
-  background: radial-gradient(circle at 70% 30%, #162447 0%, #0A1128 70%, #060B1A 100%);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #0A1128;
   color: #FFFFFF;
+
+  .page-hero-image { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  &::after { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(3,13,30,.93) 0%, rgba(6,19,38,.76) 52%, rgba(6,19,38,.38) 100%), linear-gradient(0deg, rgba(3,13,30,.52), transparent 58%); content: ""; }
+
   padding-top: calc(var(--header-height) + 4rem);
   padding-bottom: 5rem;
   text-align: center;
 
   .page-hero-inner {
+    position: relative;
+    z-index: 1;
     max-width: 800px;
     margin: 0 auto;
 
@@ -120,11 +129,13 @@
         line-height: 1.5;
 
         &::before {
-          content: '✓';
+          content: '';
           position: absolute;
           left: 0;
-          color: var(--color-gold-400);
-          font-weight: 700;
+          top: .22rem;
+          width: 1rem;
+          height: 1rem;
+          background: url('/assets/icons/verified-stamp.png') center / contain no-repeat;
         }
       }
     }

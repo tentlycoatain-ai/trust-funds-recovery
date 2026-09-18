@@ -68,7 +68,7 @@ import { DialerModalComponent } from '../../../shared/components/dialer-modal/di
                   <td><crm-status-badge [status]="cust.status" /></td>
                   <td>
                     <div class="action-flex">
-                      <button class="btn-dial-sm" (click)="dialCustomer(cust)">📞 Call</button>
+                      <button class="btn-dial-sm" (click)="dialCustomer(cust)"><img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" /> Call</button>
                       <a [routerLink]="['/agent/customers', cust.id]" class="btn-view-sm">Profile</a>
                     </div>
                   </td>

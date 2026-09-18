@@ -35,12 +35,7 @@ import { ToastService } from '../../../shared/services/toast.service';
           <div class="doc-card">
             <div class="doc-top">
               <div class="icon-box">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                  <polyline points="14 2 14 8 20 8"/>
-                  <line x1="16" y1="13" x2="8" y2="13"/>
-                  <line x1="16" y1="17" x2="8" y2="17"/>
-                </svg>
+                <img class="real-icon real-icon-inline" src="/assets/icons/coin-stack.png" alt="" aria-hidden="true" />
               </div>
               <crm-status-badge [status]="doc.status" />
             </div>
@@ -72,7 +67,7 @@ import { ToastService } from '../../../shared/services/toast.service';
           <div class="modal-card" (click)="$event.stopPropagation()">
             <div class="modal-header">
               <h3>Upload Document</h3>
-              <button class="close-btn" (click)="isUploadModalOpen.set(false)">✕</button>
+              <button class="close-btn" (click)="isUploadModalOpen.set(false)"><img class="real-icon real-icon-inline" src="/assets/icons/close-seal.png" alt="" aria-hidden="true" /></button>
             </div>
             <form (ngSubmit)="submitUpload()" class="modal-form">
               <div class="form-group">
@@ -96,11 +91,7 @@ import { ToastService } from '../../../shared/services/toast.service';
                 </div>
               </div>
               <div class="drop-zone">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                  <polyline points="17 8 12 3 7 8"/>
-                  <line x1="12" y1="3" x2="12" y2="15"/>
-                </svg>
+                <img class="real-icon real-icon-inline" src="/assets/icons/coin-stack.png" alt="" aria-hidden="true" />
                 <span>Drag & drop file or click to browse</span>
                 <span class="file-hint">PDF, DOCX, PNG up to 25MB</span>
               </div>

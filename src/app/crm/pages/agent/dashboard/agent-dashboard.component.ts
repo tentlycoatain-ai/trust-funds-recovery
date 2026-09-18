@@ -30,11 +30,11 @@ import { DialerModalComponent } from '../../../shared/components/dialer-modal/di
       <!-- Agent Greeting Header -->
       <div class="greeting-header">
         <div>
-          <h2>Welcome back, {{ currentUser()?.name || 'Marcus' }} 👋</h2>
+          <h2>Welcome back, {{ currentUser()?.name || 'Marcus' }}</h2>
           <p class="subtitle">Here is your daily recovery pipeline, urgent court dates, and claimant calls schedule.</p>
         </div>
         <button class="btn-dialer-quick" (click)="isDialerOpen.set(true)">
-          📞 Launch Telephony Dialer
+          <img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" /> Launch Telephony Dialer
         </button>
       </div>
 
@@ -52,7 +52,7 @@ import { DialerModalComponent } from '../../../shared/components/dialer-modal/di
         <div class="card-box">
           <div class="header-flex">
             <h3>My Active Recovery Cases</h3>
-            <a routerLink="/agent/cases" class="view-link">View all cases →</a>
+            <a routerLink="/agent/cases" class="view-link">View all cases <img class="real-icon real-icon-inline" src="/assets/icons/forward-card.png" alt="" aria-hidden="true" /></a>
           </div>
 
           <div class="table-responsive">
@@ -89,14 +89,14 @@ import { DialerModalComponent } from '../../../shared/components/dialer-modal/di
         <div class="card-box">
           <div class="header-flex">
             <h3>My Daily Action Checklist</h3>
-            <a routerLink="/agent/tasks" class="view-link">All tasks →</a>
+            <a routerLink="/agent/tasks" class="view-link">All tasks <img class="real-icon real-icon-inline" src="/assets/icons/forward-card.png" alt="" aria-hidden="true" /></a>
           </div>
 
           <div class="tasks-list">
             @for (t of myTasks(); track t.id) {
               <div class="task-card" [class.completed]="t.status === 'completed'">
                 <div class="task-chk" (click)="toggleTask(t.id)">
-                  @if (t.status === 'completed') { ✓ }
+                  @if (t.status === 'completed') { <img class="real-icon real-icon-inline" src="/assets/icons/verified-stamp.png" alt="" aria-hidden="true" /> }
                 </div>
                 <div class="task-info">
                   <span class="task-title">{{ t.title }}</span>
@@ -115,7 +115,7 @@ import { DialerModalComponent } from '../../../shared/components/dialer-modal/di
       <div class="card-box">
         <div class="header-flex">
           <h3>High Priority Leads to Contact</h3>
-          <a routerLink="/agent/leads" class="view-link">All Leads →</a>
+          <a routerLink="/agent/leads" class="view-link">All Leads <img class="real-icon real-icon-inline" src="/assets/icons/forward-card.png" alt="" aria-hidden="true" /></a>
         </div>
 
         <div class="table-responsive">
@@ -152,7 +152,7 @@ import { DialerModalComponent } from '../../../shared/components/dialer-modal/di
                   <td><crm-status-badge [status]="lead.stage" /></td>
                   <td>
                     <button class="btn-call-sm" (click)="dialLead(lead)">
-                      📞 Call
+                      <img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" /> Call
                     </button>
                   </td>
                 </tr>

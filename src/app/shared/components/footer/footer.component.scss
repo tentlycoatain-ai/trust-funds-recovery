@@ -87,43 +87,7 @@
   text-decoration: none;
   margin-bottom: 1.25rem;
 
-  .footer-shield {
-    width: 38px;
-    height: 38px;
-    border-radius: 8px;
-    background: rgba(30, 58, 138, 0.35);
-    border: 1px solid rgba(96, 165, 250, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .shield-svg {
-      width: 24px;
-      height: 24px;
-    }
-  }
-
-  .brand-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-
-    .title {
-      font-family: var(--font-heading);
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: #FFFFFF;
-      letter-spacing: 0.04em;
-    }
-
-    .sub {
-      font-family: var(--font-heading);
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--color-gold-400);
-      letter-spacing: 0.2em;
-    }
-  }
+  .footer-brand-logo { width: 220px; height: auto; }
 }
 
 .brand-description {

@@ -29,7 +29,7 @@ import { Agent } from '../../../core/models/agent.model';
       <div class="summary-grid">
         <div class="summary-card">
           <div class="summary-icon active-calls">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" />
           </div>
           <div>
             <div class="summary-num">{{ activeCalls().length }}</div>
@@ -38,7 +38,7 @@ import { Agent } from '../../../core/models/agent.model';
         </div>
         <div class="summary-card">
           <div class="summary-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" />
           </div>
           <div>
             <div class="summary-num">{{ agents().length }}</div>
@@ -47,7 +47,7 @@ import { Agent } from '../../../core/models/agent.model';
         </div>
         <div class="summary-card">
           <div class="summary-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" />
           </div>
           <div>
             <div class="summary-num">{{ todayCallCount() }}</div>
@@ -56,7 +56,7 @@ import { Agent } from '../../../core/models/agent.model';
         </div>
         <div class="summary-card">
           <div class="summary-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" />
           </div>
           <div>
             <div class="summary-num">{{ avgDuration() }}</div>
@@ -91,11 +91,11 @@ import { Agent } from '../../../core/models/agent.model';
                 </div>
                 <div class="active-call-body">
                   <div class="call-detail-row">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" />
                     <span>{{ getCustomerName(call.customerId || '') }}</span>
                   </div>
                   <div class="call-detail-row">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/></svg>
+                    <img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" />
                     <span>████-████-████</span>
                     <span class="masked-label">Masked</span>
                   </div>
@@ -110,7 +110,7 @@ import { Agent } from '../../../core/models/agent.model';
           </div>
         } @else {
           <div class="empty-calls">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72"/></svg>
+            <img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" />
             <p>No active calls at this moment</p>
           </div>
         }

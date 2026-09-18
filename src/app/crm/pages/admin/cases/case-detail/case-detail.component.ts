@@ -131,7 +131,7 @@ import { ToastService } from '../../../../shared/services/toast.service';
               <div class="docs-list">
                 @for (doc of documents(); track doc.id) {
                   <div class="doc-item">
-                    <span class="file-icon">📄</span>
+                    <span class="file-icon"><img class="real-icon real-icon-inline" src="/assets/icons/document-folder.png" alt="" aria-hidden="true" /></span>
                     <div class="doc-meta">
                       <strong>{{ doc.title }}</strong>
                       <span class="sub">{{ doc.fileName }} ({{ doc.fileSize }})</span>

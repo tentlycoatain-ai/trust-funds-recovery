@@ -1,0 +1,20 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Trust Funds Recovery mark</title>
+  <desc id="desc">An abstract monogram formed from a protected T and F pathway</desc>
+  <defs>
+    <linearGradient id="ink" x1="14" y1="8" x2="82" y2="88" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1D3A"/>
+      <stop offset="1" stop-color="#174C96"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="36" y1="20" x2="66" y2="70" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#70B7FF"/>
+      <stop offset="1" stop-color="#D5B06A"/>
+    </linearGradient>
+  </defs>
+  <rect x="5" y="5" width="86" height="86" rx="25" fill="url(#ink)"/>
+  <path d="M27 26H69" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <path d="M48 26V69" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <path d="M48 47H67" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M48 69L67 50" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+  <rect x="5.75" y="5.75" width="84.5" height="84.5" rx="24.25" stroke="white" stroke-opacity=".16" stroke-width="1.5"/>
+</svg>

@@ -57,6 +57,9 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "allowedHosts": ["4200-id0bzmkx6hkx2zk53dks3-31e03a27.us4.manus.computer"]
+          },
           "configurations": {
             "production": {
               "buildTarget": "trust-funds-recovery:build:production"
