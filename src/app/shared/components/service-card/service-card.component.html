@@ -1,46 +1,9 @@
 <div class="service-card" *ngIf="service">
   <!-- Icon & Header -->
-  <div class="service-card-header">
-    <div class="service-icon-box" [ngSwitch]="service.iconType">
-      <!-- Investment -->
-      <svg *ngSwitchCase="'investment'" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="12" y1="1" x2="12" y2="23"></line>
-        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-      </svg>
-      <!-- Fraud -->
-      <svg *ngSwitchCase="'fraud'" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-        <line x1="12" y1="9" x2="12" y2="13"></line>
-        <line x1="12" y1="17" x2="12.01" y2="17"></line>
-      </svg>
-      <!-- Scam -->
-      <svg *ngSwitchCase="'scam'" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="10"></circle>
-        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
-      </svg>
-      <!-- Transaction -->
-      <svg *ngSwitchCase="'transaction'" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="5" width="20" height="14" rx="2"></rect>
-        <line x1="2" y1="10" x2="22" y2="10"></line>
-      </svg>
-      <!-- Asset -->
-      <svg *ngSwitchCase="'asset'" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-        <polyline points="2 17 12 22 22 17"></polyline>
-        <polyline points="2 12 12 17 22 12"></polyline>
-      </svg>
-      <!-- Dossier -->
-      <svg *ngSwitchCase="'dossier'" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-        <polyline points="14 2 14 8 20 8"></polyline>
-        <line x1="16" y1="13" x2="8" y2="13"></line>
-        <line x1="16" y1="17" x2="8" y2="17"></line>
-      </svg>
-      <!-- Default/Consult -->
-      <svg *ngSwitchDefault width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-      </svg>
-    </div>
+    <div class="service-card-header">
+      <div class="service-icon-box" [ngSwitch]="service.iconType">
+        <app-visual-icon [icon]="service.iconType" [label]="service.title"></app-visual-icon>
+      </div>
 
     <span class="service-target">{{ service.recommendedFor }}</span>
   </div>

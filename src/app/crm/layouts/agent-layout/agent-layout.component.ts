@@ -5,6 +5,7 @@ import { AuthService } from '../../core/auth/auth.service';
 import { NotificationService } from '../../core/services/notification.service';
 import { ToastComponent } from '../../shared/components/toast/toast.component';
 import { DialerModalComponent } from '../../shared/components/dialer-modal/dialer-modal.component';
+import { VisualIconComponent } from '../../../shared/components/visual-icon/visual-icon.component';
 
 @Component({
   selector: 'crm-agent-layout',
@@ -15,7 +16,8 @@ import { DialerModalComponent } from '../../shared/components/dialer-modal/diale
     RouterLink,
     RouterLinkActive,
     ToastComponent,
-    DialerModalComponent
+    DialerModalComponent,
+    VisualIconComponent
   ],
   template: `
     <div class="crm-shell" [class.sidebar-collapsed]="isSidebarCollapsed()">
@@ -42,39 +44,34 @@ import { DialerModalComponent } from '../../shared/components/dialer-modal/diale
           <div class="nav-group-label" *ngIf="!isSidebarCollapsed()">My Workspace</div>
 
           <a routerLink="/agent/dashboard" routerLinkActive="active" class="nav-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <app-visual-icon icon="dashboard"></app-visual-icon>
             <span class="nav-label" *ngIf="!isSidebarCollapsed()">Overview</span>
           </a>
 
           <a routerLink="/agent/leads" routerLinkActive="active" class="nav-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-            <span class="nav-label" *ngIf="!isSidebarCollapsed()">My Leads</span>
-          </a>
-
-          <a routerLink="/agent/customers" routerLinkActive="active" class="nav-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <app-visual-icon icon="customer"></app-visual-icon>
             <span class="nav-label" *ngIf="!isSidebarCollapsed()">My Customers</span>
           </a>
 
           <a routerLink="/agent/cases" routerLinkActive="active" class="nav-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <app-visual-icon icon="case"></app-visual-icon>
             <span class="nav-label" *ngIf="!isSidebarCollapsed()">Assigned Cases</span>
           </a>
 
           <a routerLink="/agent/tasks" routerLinkActive="active" class="nav-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            <app-visual-icon icon="task"></app-visual-icon>
             <span class="nav-label" *ngIf="!isSidebarCollapsed()">My Tasks</span>
           </a>
 
           <div class="nav-group-label" *ngIf="!isSidebarCollapsed()">Communications</div>
 
           <a routerLink="/agent/dialer" routerLinkActive="active" class="nav-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <app-visual-icon icon="call"></app-visual-icon>
             <span class="nav-label" *ngIf="!isSidebarCollapsed()">Dialer & Calls</span>
           </a>
 
           <a routerLink="/agent/documents" routerLinkActive="active" class="nav-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <app-visual-icon icon="document"></app-visual-icon>
             <span class="nav-label" *ngIf="!isSidebarCollapsed()">Documents</span>
           </a>
         </nav>
@@ -82,7 +79,7 @@ import { DialerModalComponent } from '../../shared/components/dialer-modal/diale
         <!-- Sidebar Footer -->
         <div class="sidebar-footer">
           <button type="button" class="btn-role-switch" (click)="switchToAdmin()" title="Switch to Admin Console">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <app-visual-icon icon="switch"></app-visual-icon>
             <span *ngIf="!isSidebarCollapsed()">Admin Console</span>
           </button>
         </div>
@@ -102,14 +99,14 @@ import { DialerModalComponent } from '../../shared/components/dialer-modal/diale
           <div class="topbar-right">
             <!-- Launch Dialer Modal -->
             <button class="topbar-action-btn dialer-btn" (click)="openQuickDialer()" title="Open Dialer">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <app-visual-icon icon="call"></app-visual-icon>
               <span>Quick Dial</span>
             </button>
 
             <!-- Notifications -->
             <div class="notif-wrapper">
               <button class="topbar-action-btn" (click)="toggleNotifDropdown()" title="Notifications">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                <app-visual-icon icon="notification"></app-visual-icon>
                 @if ((unreadNotifCount$ | async); as count) {
                   @if (count > 0) {
                     <span class="badge-count">{{ count }}</span>
@@ -143,7 +140,7 @@ import { DialerModalComponent } from '../../shared/components/dialer-modal/diale
                 <span class="user-role">Recovery Specialist</span>
               </div>
               <button class="logout-btn" (click)="logout()" title="Logout">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                <app-visual-icon icon="logout"></app-visual-icon>
               </button>
             </div>
           </div>

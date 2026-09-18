@@ -47,3 +47,7 @@ The first visual pass was intentionally replaced after review. The landing page 
 ## Public-page photography rollout
 
 The editorial photography system has now been extended across every primary public landing page. About uses a multidisciplinary team review, Services uses transaction-analysis work, How It Works uses a document-roadmap scene, Resources uses a practical reading scene, and Contact uses a human intake-coordinator scene. Each hero has descriptive alternative text, page-specific image composition, a dark readable overlay, and preserved navigation/CTA behavior. Legal pages remain intentionally content-first rather than promotional landing pages.
+
+## Image-based icon system rollout
+
+The generic outline treatment has been replaced in the highest-visibility public and CRM surfaces with a shared image-icon component. Public service cards now use tangible dollar-note, warning-file, payment-card, coin-stack, and document-folder assets. Admin and Agent CRM navigation, dialer, notifications, public-site switch, role switch, and logout controls use the same asset-backed icon vocabulary. Each icon is an actual transparent PNG with a semantic image label, rather than an inline generic line glyph. Remaining inline chevrons and small utility marks are intentionally retained where they function as compact interaction indicators rather than content icons.
