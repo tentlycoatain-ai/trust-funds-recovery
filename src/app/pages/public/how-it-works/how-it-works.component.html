@@ -1,0 +1,141 @@
+<!-- HOW IT WORKS HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="badge badge-gold">Structured Roadmap</span>
+      <h1>How the Recovery Process Works</h1>
+      <p>
+        A clear, disciplined 6-stage journey from initial confidential intake through forensic investigation, institutional outreach, and final resolution review.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN TIMELINE SECTION -->
+<section class="section timeline-page-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-blue">Step-by-Step Transparency</span>
+      <h2>The 6-Stage Case Journey</h2>
+      <p>
+        Every dispute follows our structured protocol designed to maximize evidentiary credibility before financial institutions, ombudsmen, and regulatory bodies.
+      </p>
+    </div>
+
+    <!-- Reusable Process Timeline with detailed checklist view -->
+    <app-process-timeline [steps]="detailedSteps" [showDetails]="true" layout="timeline"></app-process-timeline>
+  </div>
+</section>
+
+<!-- WHAT TO PREPARE CHECKLIST -->
+<section class="section checklist-section navy-bg-gradient">
+  <div class="container">
+    <div class="checklist-grid">
+      <div class="checklist-intro">
+        <span class="badge badge-gold">Preparation Guide</span>
+        <h2>What Documentation Will You Need?</h2>
+        <p>
+          Gathering your records early dramatically accelerates the initial feasibility audit. We recommend locating the following materials before completing your intake:
+        </p>
+        <div class="tip-box">
+          <strong>Important Tip:</strong> Do not delete chat logs or alter electronic documents. Even seemingly minor message timestamps can serve as critical proof of counterparty deception.
+        </div>
+      </div>
+
+      <div class="checklist-cards">
+        <div class="check-group-card">
+          <div class="group-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+              <line x1="2" y1="10" x2="22" y2="10"></line>
+            </svg>
+            <span>Banking & Payment Confirmations</span>
+          </div>
+          <ul>
+            <li>SWIFT wire receipts (MT103 message with reference code)</li>
+            <li>Bank statements showing debited accounts and recipient details</li>
+            <li>Credit/debit card transaction statements</li>
+            <li>Payment gateway confirmation receipts (e.g. PayPal, Stripe)</li>
+          </ul>
+        </div>
+
+        <div class="check-group-card">
+          <div class="group-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Communications & Correspondence</span>
+          </div>
+          <ul>
+            <li>Email threads with full internet headers if available</li>
+            <li>Exported messaging app histories (WhatsApp, Telegram, Signal)</li>
+            <li>Platform support tickets or live chat transcripts</li>
+            <li>Audio recordings or phone logs with dates and durations</li>
+          </ul>
+        </div>
+
+        <div class="check-group-card">
+          <div class="group-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+            <span>Platform Records & Agreements</span>
+          </div>
+          <ul>
+            <li>Account dashboard screenshots displaying balance & transactions</li>
+            <li>Signed terms of service, advisory contracts, or investment terms</li>
+            <li>Withdrawal rejection notices or fee demand messages</li>
+            <li>Public ledger transaction hashes (TxID) for digital assets</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REALISTIC TIMELINES & EXPECTATIONS -->
+<section class="section timeline-expectations-section">
+  <div class="container container-narrow">
+    <div class="section-header">
+      <span class="badge badge-blue">Setting Expectations</span>
+      <h2>Realistic Dispute Timelines</h2>
+      <p>
+        Financial recovery is governed by institutional statutory review cycles, not instantaneous automation. Here is what to anticipate:
+      </p>
+    </div>
+
+    <div class="timeline-phases">
+      <div class="phase-row">
+        <div class="phase-time">24–48 Hours</div>
+        <div class="phase-desc">
+          <strong>Intake & Feasibility Screening</strong>
+          <p>Initial review of facts, confirmation of jurisdiction, and preliminary viability score.</p>
+        </div>
+      </div>
+
+      <div class="phase-row">
+        <div class="phase-time">5–10 Business Days</div>
+        <div class="phase-desc">
+          <strong>Evidence Assembly & Dossier Production</strong>
+          <p>Forensic document indexing, transaction trail mapping, and drafting formal statutory notices.</p>
+        </div>
+      </div>
+
+      <div class="phase-row">
+        <div class="phase-time">30–90 Days</div>
+        <div class="phase-desc">
+          <strong>Institutional Review & Mediation Cycles</strong>
+          <p>Statutory response window for recipient banks, card networks, and financial ombudsmen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<app-cta-banner
+  badge="Ready to Start?"
+  title="Begin Step 1: Submit Your Case Overview"
+  description="Our confidential review team is ready to evaluate your situation with complete discretion.">
+</app-cta-banner>

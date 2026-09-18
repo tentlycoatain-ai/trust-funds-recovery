@@ -1,0 +1,88 @@
+<div class="video-modal-backdrop" *ngIf="isOpen" (click)="onClose()">
+  <div class="video-modal-dialog" (click)="$event.stopPropagation()" role="dialog" aria-modal="true" [attr.aria-label]="title">
+    <!-- Header -->
+    <div class="modal-header">
+      <div class="modal-header-text">
+        <span class="badge badge-gold">Official Case Walkthrough</span>
+        <h3>{{ title }}</h3>
+        <p>{{ subtitle }}</p>
+      </div>
+      <button type="button" class="btn-close" (click)="onClose()" aria-label="Close video dialog">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Cinematic Video Player Screen -->
+    <div class="video-player-container">
+      <canvas #cinematicCanvas class="cinematic-canvas"></canvas>
+
+      <!-- Center Play/Pause Overlay Indicator -->
+      <div class="player-overlay" (click)="togglePlay()">
+        <div class="center-play-button" [class.paused]="!isPlaying()">
+          <svg *ngIf="!isPlaying()" width="36" height="36" viewBox="0 0 24 24" fill="#FFFFFF">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <svg *ngIf="isPlaying()" width="36" height="36" viewBox="0 0 24 24" fill="#FFFFFF">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+          </svg>
+        </div>
+
+        <div class="simulation-watermark">
+          <span class="rec-dot" [class.active]="isPlaying()"></span>
+          <span>VIDEO PREVIEW • HIGH-DEFINITION 1080P</span>
+        </div>
+      </div>
+
+      <!-- Video Controls Bar -->
+      <div class="player-controls">
+        <!-- Progress Bar -->
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" [style.width.%]="progressPercent()"></div>
+        </div>
+
+        <div class="controls-row">
+          <div class="controls-left">
+            <button type="button" class="ctrl-btn" (click)="togglePlay()" [attr.aria-label]="isPlaying() ? 'Pause' : 'Play'">
+              <svg *ngIf="isPlaying()" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+              </svg>
+              <svg *ngIf="!isPlaying()" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </button>
+
+            <button type="button" class="ctrl-btn" (click)="toggleMute()" [attr.aria-label]="isMuted() ? 'Unmute' : 'Mute'">
+              <svg *ngIf="!isMuted()" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+              <svg *ngIf="isMuted()" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+              </svg>
+            </button>
+
+            <span class="time-stamp">{{ currentTimeStr() }} / {{ durationStr() }}</span>
+          </div>
+
+          <div class="controls-right">
+            <span class="format-badge">Ready for Client Video Asset</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Footer Notice -->
+    <div class="modal-footer">
+      <p>
+        <strong>Production Note:</strong> This video element is architected with complete playback state management and can be instantly replaced with the client's MP4/WebM video asset without code refactoring.
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+.cta-banner-section {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.cta-card {
+  background: radial-gradient(circle at 10% 20%, #172A52 0%, #0A1128 70%, #060B1A 100%);
+  border: 1px solid rgba(197, 168, 128, 0.25);
+  border-radius: var(--radius-xl);
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 3.5rem);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px -10px rgba(10, 17, 40, 0.4), 0 0 35px rgba(197, 168, 128, 0.1);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin: 0 auto;
+
+  .badge {
+    margin-bottom: 1.25rem;
+  }
+
+  .cta-title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #FFFFFF;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+  }
+
+  .cta-description {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: #CBD5E1;
+    line-height: 1.6;
+    margin-bottom: 2.25rem;
+  }
+}
+
+.cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 2.25rem;
+
+  @media (max-width: 580px) {
+    flex-direction: column;
+    width: 100%;
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+.cta-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  .badge-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #94A3B8;
+
+    svg {
+      color: var(--color-gold-400);
+    }
+  }
+}

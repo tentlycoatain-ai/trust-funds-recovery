@@ -1,0 +1,276 @@
+<!-- CONTACT HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="badge badge-gold">Secure Case Intake</span>
+      <h1>Start Your Recovery Assessment</h1>
+      <p>
+        Submit the specifics of your situation for an objective, confidential preliminary review. No high-pressure sales, no false promises.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN FORM & DETAILS SECTION -->
+<section class="section contact-main-section">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- LEFT: CONTACT INFORMATION & ADVISORY -->
+      <div class="contact-sidebar">
+        <div class="info-card">
+          <span class="badge badge-blue">Case Intake Division</span>
+          <h3>Confidential Client Communications</h3>
+          <p>
+            Our casework coordinators review submissions during international banking hours. All information transmitted through this portal is held under strict non-disclosure obligations.
+          </p>
+
+          <div class="info-items">
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="info-content">
+                <strong>Intake Telephone</strong>
+                <span>+1 (800) 594-8291 (Direct Case Desk)</span>
+                <span class="sub-label">Toll-free international routing</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="info-content">
+                <strong>Encrypted Email Desk</strong>
+                <span>case-intake&#64;trustfundsrecovery.com</span>
+                <span class="sub-label">PGP encryption key available on request</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="info-content">
+                <strong>Operational Hours</strong>
+                <span>Monday – Friday: 08:00 – 18:00 UTC</span>
+                <span class="sub-label">Electronic intake processed 24/7/365</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="info-content">
+                <strong>Operational Centre</strong>
+                <span>International Case Operations Facility</span>
+                <span class="sub-label">Jurisdictional liaisons worldwide</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust Box -->
+        <div class="guarantee-caution-box">
+          <div class="caution-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>Our Commitment to You</span>
+          </div>
+          <p>
+            We will never demand upfront fees before completing an initial feasibility review. If we determine that recovery is non-viable, we will communicate that transparently so you do not expend unnecessary resources.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT: INTAKE FORM OR SUCCESS STATE -->
+      <div class="form-container">
+        <!-- SUCCESS STATE -->
+        <div class="success-card" *ngIf="submittedSuccessfully()">
+          <div class="success-icon-badge">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+
+          <h2>Case Intake Confirmed</h2>
+          <p class="success-lead">
+            Your dispute overview has been encrypted and securely assigned to our preliminary review division.
+          </p>
+
+          <div class="ref-box" *ngIf="submissionDetails()">
+            <span class="ref-label">Official Case Reference ID</span>
+            <span class="ref-number">{{ submissionDetails()?.referenceId }}</span>
+            <span class="ref-note">Please save this reference number for all future communications.</span>
+          </div>
+
+          <div class="next-steps-guide">
+            <h4>What to Expect Next:</h4>
+            <div class="next-step-row">
+              <span class="step-badge-mini">1</span>
+              <p>A dispute intake officer will review transaction records within <strong>24 to 48 business hours</strong>.</p>
+            </div>
+            <div class="next-step-row">
+              <span class="step-badge-mini">2</span>
+              <p>You will receive an initial Case Feasibility Brief via your preferred communication method.</p>
+            </div>
+            <div class="next-step-row">
+              <span class="step-badge-mini">3</span>
+              <p>No contractual commitment or fee is incurred for this initial qualification review.</p>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-secondary" (click)="resetForm()">
+            Submit Additional Case Details
+          </button>
+        </div>
+
+        <!-- INTAKE FORM -->
+        <div class="form-wrapper" *ngIf="!submittedSuccessfully()">
+          <div class="form-header">
+            <h3>Confidential Case Questionnaire</h3>
+            <p>Please provide as much factual detail as possible to assist our analysts.</p>
+          </div>
+
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+            <!-- Name & Email Row -->
+            <div class="form-row">
+              <div class="form-group" [class.has-error]="isFieldInvalid('fullName')">
+                <label for="fullName">Full Name <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  formControlName="fullName" 
+                  placeholder="e.g. Eleanor Vance" 
+                  autocomplete="name" />
+                <span class="error-msg" *ngIf="isFieldInvalid('fullName')">Please provide your full legal name.</span>
+              </div>
+
+              <div class="form-group" [class.has-error]="isFieldInvalid('email')">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  formControlName="email" 
+                  placeholder="e.g. eleanor@example.com" 
+                  autocomplete="email" />
+                <span class="error-msg" *ngIf="isFieldInvalid('email')">Please provide a valid email address.</span>
+              </div>
+            </div>
+
+            <!-- Phone & Country Row -->
+            <div class="form-row">
+              <div class="form-group" [class.has-error]="isFieldInvalid('phone')">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  formControlName="phone" 
+                  placeholder="e.g. +1 (555) 019-2834" 
+                  autocomplete="tel" />
+                <span class="error-msg" *ngIf="isFieldInvalid('phone')">Please provide a valid phone number.</span>
+              </div>
+
+              <div class="form-group" [class.has-error]="isFieldInvalid('country')">
+                <label for="country">Country of Residence <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="country" 
+                  formControlName="country" 
+                  placeholder="e.g. United Kingdom, Canada, Australia" 
+                  autocomplete="country-name" />
+                <span class="error-msg" *ngIf="isFieldInvalid('country')">Please enter your country.</span>
+              </div>
+            </div>
+
+            <!-- Recovery Category Dropdown -->
+            <div class="form-group" [class.has-error]="isFieldInvalid('recoveryCategory')">
+              <label for="recoveryCategory">Primary Dispute Nature <span class="required">*</span></label>
+              <select id="recoveryCategory" formControlName="recoveryCategory">
+                <option value="" disabled>Select case category...</option>
+                <option *ngFor="let opt of categoryOptions" [value]="opt.value">{{ opt.label }}</option>
+              </select>
+              <span class="error-msg" *ngIf="isFieldInvalid('recoveryCategory')">Please choose a category that best matches your dispute.</span>
+            </div>
+
+            <!-- Case Narrative Description -->
+            <div class="form-group" [class.has-error]="isFieldInvalid('description')">
+              <label for="description">
+                Case Description & Transaction Details <span class="required">*</span>
+              </label>
+              <textarea 
+                id="description" 
+                formControlName="description" 
+                rows="5" 
+                placeholder="Describe how the loss occurred: approximate dates, platforms or individuals involved, transfer methods used, and current status of funds..."></textarea>
+              <span class="help-text">Minimum 30 characters. Please avoid submitting passwords or sensitive banking PINs.</span>
+              <span class="error-msg" *ngIf="isFieldInvalid('description')">Please provide at least 30 characters detailing the transaction or loss event.</span>
+            </div>
+
+            <!-- Preferred Communication Method -->
+            <div class="form-group">
+              <label class="section-label">Preferred Contact Channel</label>
+              <div class="radio-options">
+                <label class="radio-label">
+                  <input type="radio" value="email" formControlName="preferredContact" />
+                  <span>Email</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" value="phone" formControlName="preferredContact" />
+                  <span>Phone Call</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" value="whatsapp" formControlName="preferredContact" />
+                  <span>WhatsApp / Signal</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Consent Checkbox -->
+            <div class="form-group checkbox-group" [class.has-error]="isFieldInvalid('consent')">
+              <label class="checkbox-label">
+                <input type="checkbox" formControlName="consent" />
+                <span>
+                  I confirm that the information provided is accurate to the best of my knowledge, and I authorize Trust Funds Recovery to review these details in accordance with their <a routerLink="/privacy-policy" target="_blank">Privacy Policy</a>. I understand that preliminary intake does not constitute statutory legal representation and that outcomes cannot be guaranteed.
+                </span>
+              </label>
+              <span class="error-msg" *ngIf="isFieldInvalid('consent')">You must consent to the privacy and intake terms to submit a case.</span>
+            </div>
+
+            <!-- Submit Button with Loading State -->
+            <div class="form-action">
+              <button 
+                type="submit" 
+                class="btn btn-gold btn-lg submit-btn" 
+                [disabled]="caseService.isSubmitting()">
+                <span *ngIf="!caseService.isSubmitting()">Submit Case for Review</span>
+                <span *ngIf="caseService.isSubmitting()" class="spinner-label">
+                  <span class="spinner"></span>
+                  Encrypting & Submitting...
+                </span>
+                <svg *ngIf="!caseService.isSubmitting()" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

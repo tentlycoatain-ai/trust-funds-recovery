@@ -1,0 +1,11 @@
+@if (!isCrmRoute()) {
+  <app-header></app-header>
+}
+
+<main [class.main-content]="!isCrmRoute()" [class.crm-viewport]="isCrmRoute()">
+  <router-outlet />
+</main>
+
+@if (!isCrmRoute()) {
+  <app-footer></app-footer>
+}

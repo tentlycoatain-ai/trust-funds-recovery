@@ -1,0 +1,141 @@
+<!-- SERVICES HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="badge badge-gold">Specialized Practice Areas</span>
+      <h1>Forensic Financial Recovery Services</h1>
+      <p>
+        Methodical investigation, evidence compilation, and institutional dispute advocacy tailored to specific financial loss scenarios.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES INTRO STRIP -->
+<section class="services-intro-strip">
+  <div class="container">
+    <div class="strip-box">
+      <div class="strip-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+      </div>
+      <div class="strip-text">
+        <strong>Objective Standards:</strong> We do not offer statutory legal counsel or guaranteed outcomes. All services focus on evidence assembly, digital forensics, compliance filings, and institutional coordination.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAILED SERVICES LIST -->
+<section class="section services-detail-section">
+  <div class="container">
+    <div class="services-stack">
+      <article class="service-detail-card" *ngFor="let s of services; let i = index" [id]="s.id">
+        <div class="card-grid">
+          <div class="service-left">
+            <span class="badge badge-blue">{{ s.badge }}</span>
+            <h2>{{ s.title }}</h2>
+            <p class="service-short">{{ s.shortDesc }}</p>
+            <p class="service-explanation">{{ s.detailedExplanation }}</p>
+
+            <div class="service-cta-wrapper">
+              <a routerLink="/contact" [queryParams]="{ category: s.inquiryCode }" class="btn btn-primary">
+                <span>Inquire About This Service</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <span class="consult-note">Strictly confidential intake</span>
+            </div>
+          </div>
+
+          <div class="service-right">
+            <!-- Process Breakdown -->
+            <div class="breakdown-panel">
+              <h4>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+                Execution Stages
+              </h4>
+              <ul class="process-points">
+                <li *ngFor="let point of s.processPoints">
+                  <span class="point-num"></span>
+                  <span>{{ point }}</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Deliverables -->
+            <div class="deliverables-panel">
+              <h4>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                Key Case Deliverables
+              </h4>
+              <div class="deliverable-tags">
+                <span class="deliverable-tag" *ngFor="let del of s.deliverables">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  {{ del }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO GET STARTED -->
+<section class="section get-started-summary navy-bg-gradient">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-gold">The Assessment Protocol</span>
+      <h2>How Every Engagement Commences</h2>
+      <p>
+        To ensure we deliver high-impact assistance, all new matters follow a three-tier intake qualification protocol.
+      </p>
+    </div>
+
+    <div class="protocol-grid">
+      <div class="protocol-card">
+        <div class="step-badge">Phase 1</div>
+        <h3>Secure Submission</h3>
+        <p>You provide transaction receipts, communication records, and a concise summary through our encrypted intake portal.</p>
+      </div>
+
+      <div class="protocol-card">
+        <div class="step-badge">Phase 2</div>
+        <h3>Preliminary Audit</h3>
+        <p>Our senior analysts review the transaction pathways, identify counterparty entities, and evaluate recovery viability.</p>
+      </div>
+
+      <div class="protocol-card">
+        <div class="step-badge">Phase 3</div>
+        <h3>Engagement Roadmap</h3>
+        <p>If feasible, we furnish a tailored engagement proposal outlining specific deliverables, costs, and projected timelines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<app-cta-banner
+  badge="Initiate Case Review"
+  title="Need Guidance on a Financial Dispute?"
+  description="Submit your situation to our case evaluation unit for an honest, confidential review.">
+</app-cta-banner>

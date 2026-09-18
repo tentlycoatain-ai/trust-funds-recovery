@@ -1,0 +1,55 @@
+.legal-hub-hero {
+  background: linear-gradient(135deg, hsl(215, 40%, 14%) 0%, hsl(215, 35%, 8%) 100%);
+  padding: 5rem 0 4rem;
+  text-align: center;
+
+  h1 {
+    color: #ffffff;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin: 0.75rem 0 0.5rem;
+  }
+
+  p {
+    color: hsl(215, 25%, 70%);
+    font-size: 1.1rem;
+  }
+}
+
+.legal-subnav {
+  background: hsl(215, 30%, 12%);
+  border-bottom: 1px solid hsl(215, 25%, 22%);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  .legal-subnav-list {
+    display: flex;
+    gap: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+
+    li a {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: hsl(215, 20%, 65%);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s ease, border-color 0.2s ease;
+
+      &:hover {
+        color: #ffffff;
+      }
+
+      &.active {
+        color: hsl(45, 95%, 55%);
+        border-bottom-color: hsl(45, 95%, 55%);
+      }
+    }
+  }
+}

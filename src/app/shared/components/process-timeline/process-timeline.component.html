@@ -1,0 +1,36 @@
+<div class="process-container" [class.is-timeline-view]="layout === 'timeline'">
+  <div class="steps-wrapper">
+    <div class="step-card" *ngFor="let step of steps; let last = last; let i = index">
+      <!-- Step Header with badge & number -->
+      <div class="step-header">
+        <div class="step-pill">
+          <span class="step-num">Step {{ step.number }}</span>
+        </div>
+        <span *ngIf="step.badge" class="badge badge-gold">{{ step.badge }}</span>
+      </div>
+
+      <!-- Connecting line indicator -->
+      <div *ngIf="!last" class="timeline-connector"></div>
+
+      <!-- Step Content -->
+      <div class="step-body">
+        <h3 class="step-title">{{ step.title }}</h3>
+        <p class="step-desc">{{ step.shortDesc }}</p>
+        
+        <p *ngIf="showDetails && step.detail" class="step-detail">
+          {{ step.detail }}
+        </p>
+
+        <!-- Checklist of actions/deliverables if present -->
+        <ul *ngIf="showDetails && step.actionItems?.length" class="step-actions">
+          <li *ngFor="let action of step.actionItems">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="check-icon">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>{{ action }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

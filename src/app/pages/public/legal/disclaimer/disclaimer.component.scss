@@ -1,0 +1,125 @@
+.page-hero {
+  background: radial-gradient(circle at 70% 30%, #162447 0%, #0A1128 70%, #060B1A 100%);
+  color: #FFFFFF;
+  padding-top: calc(var(--header-height) + 4rem);
+  padding-bottom: 4rem;
+  text-align: center;
+
+  .page-hero-inner {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .badge {
+      margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      color: #FFFFFF;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      color: #CBD5E1;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+.legal-content-section {
+  background: #FFFFFF;
+}
+
+.disclaimer-alert-banner {
+  background: #FFFBEB;
+  border: 1px solid #FCD34D;
+  border-left: 5px solid #D97706;
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+
+  .banner-icon {
+    color: #D97706;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+  }
+
+  .banner-text {
+    h3 {
+      font-size: 1.15rem;
+      color: #92400E;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.925rem;
+      color: #78350F;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+}
+
+.legal-document {
+  h2 {
+    font-size: 1.35rem;
+    color: var(--color-navy-950);
+    margin-top: 2.25rem;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-surface-border-subtle);
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    font-size: 0.975rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0.5rem;
+
+    li {
+      position: relative;
+      padding-left: 1.5rem;
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0.25rem;
+        color: var(--color-blue-600);
+        font-size: 1.2rem;
+        line-height: 1;
+      }
+
+      strong {
+        color: var(--color-navy-950);
+      }
+    }
+  }
+
+  .contact-box {
+    background: var(--color-surface-bg);
+    border: 1px solid var(--color-surface-border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.5rem;
+    font-size: 0.95rem;
+    color: var(--color-navy-900);
+    line-height: 1.6;
+    margin-top: 1.5rem;
+  }
+}

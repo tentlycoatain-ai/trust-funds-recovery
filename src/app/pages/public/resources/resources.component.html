@@ -1,0 +1,157 @@
+<!-- RESOURCES HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="badge badge-gold">Knowledge Center</span>
+      <h1>Financial Safety, Fraud Awareness & Recovery Insights</h1>
+      <p>
+        In-depth guides, regulatory breakdown analyses, and educational resources developed by our forensic dispute specialists.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY FILTER BAR -->
+<section class="filter-section">
+  <div class="container">
+    <div class="filter-bar">
+      <button 
+        type="button" 
+        class="filter-tab" 
+        [class.active]="activeCategory() === 'all'" 
+        (click)="setCategory('all')">
+        All Articles ({{ articles.length }})
+      </button>
+
+      <button 
+        type="button" 
+        class="filter-tab" 
+        [class.active]="activeCategory() === 'fraud-awareness'" 
+        (click)="setCategory('fraud-awareness')">
+        Fraud Awareness
+      </button>
+
+      <button 
+        type="button" 
+        class="filter-tab" 
+        [class.active]="activeCategory() === 'recovery-guide'" 
+        (click)="setCategory('recovery-guide')">
+        Recovery Guides
+      </button>
+
+      <button 
+        type="button" 
+        class="filter-tab" 
+        [class.active]="activeCategory() === 'banking-rules'" 
+        (click)="setCategory('banking-rules')">
+        Banking Rules & Recalls
+      </button>
+
+      <button 
+        type="button" 
+        class="filter-tab" 
+        [class.active]="activeCategory() === 'asset-safety'" 
+        (click)="setCategory('asset-safety')">
+        Digital Asset Forensics
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES GRID -->
+<section class="section articles-section">
+  <div class="container">
+    <div class="articles-grid">
+      <article class="article-card" *ngFor="let article of filteredArticles()">
+        <div class="article-meta">
+          <span class="badge badge-blue">{{ article.category }}</span>
+          <span class="read-time">{{ article.readTime }} • {{ article.publishDate }}</span>
+        </div>
+
+        <h3 class="article-title">{{ article.title }}</h3>
+        <p class="article-excerpt">{{ article.excerpt }}</p>
+
+        <div class="takeaways-box">
+          <span class="takeaway-header">Key Inquiries Addressed:</span>
+          <ul>
+            <li *ngFor="let pt of article.keyTakeaways">
+              <span class="bullet"></span>
+              <span>{{ pt }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="article-footer">
+          <a routerLink="/contact" class="read-more-btn">
+            <span>Inquire About This Subject</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY FINANCIAL SAFETY PROTOCOL -->
+<section class="section safety-protocol-section navy-bg-gradient">
+  <div class="container">
+    <div class="safety-box">
+      <div class="safety-header">
+        <span class="badge badge-gold">Emergency Checklist</span>
+        <h2>Immediate Actions If You Suspect Financial Compromise</h2>
+        <p>
+          Time is the most critical variable in financial disputes. If you suspect an unauthorized transaction or fraudulent entity, take these four immediate steps:
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="safety-step-card">
+          <span class="num">1</span>
+          <h4>Notify Sending Institution</h4>
+          <p>Request an immediate wire recall or fraud freeze via phone and immediately follow up with a written confirmation letter.</p>
+        </div>
+
+        <div class="safety-step-card">
+          <span class="num">2</span>
+          <h4>Secure All Credentials</h4>
+          <p>Reset passwords on all associated email and financial portals using a clean, secure device and enforce multi-factor authentication (MFA).</p>
+        </div>
+
+        <div class="safety-step-card">
+          <span class="num">3</span>
+          <h4>Download All Evidentiary Records</h4>
+          <p>Export conversation logs, balance statements, transfer receipts, and platform terms before the counterparty restricts your access.</p>
+        </div>
+
+        <div class="safety-step-card">
+          <span class="num">4</span>
+          <h4>Initiate Case Feasibility Review</h4>
+          <p>Submit your documentation to our intake unit to determine if viable institutional dispute avenues remain open.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="section faq-resource-section">
+  <div class="container container-narrow">
+    <div class="section-header">
+      <span class="badge badge-blue">Knowledge Base</span>
+      <h2>Frequently Asked Recovery Questions</h2>
+      <p>Answers to foundational questions regarding fund tracing, intermediary procedures, and recovery viability.</p>
+    </div>
+
+    <app-faq-accordion [items]="generalFaqs"></app-faq-accordion>
+  </div>
+</section>
+
+<!-- CTA -->
+<app-cta-banner
+  badge="Need Concrete Guidance?"
+  title="Discuss Your Situation with Our Team"
+  description="Our specialists can review your case documentation and provide clear-eyed strategic feedback.">
+</app-cta-banner>

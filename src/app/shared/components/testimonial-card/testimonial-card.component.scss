@@ -1,0 +1,112 @@
+.testimonial-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-surface-border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(37, 99, 235, 0.3);
+  }
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  .category-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-blue-700);
+    background: var(--color-blue-50);
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-blue-100);
+  }
+
+  .placeholder-notice {
+    font-size: 0.72rem;
+    color: var(--color-text-muted);
+    background: var(--color-surface-card-subtle);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-sm);
+  }
+}
+
+.scenario-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-navy-950);
+  margin-bottom: 1rem;
+  line-height: 1.35;
+}
+
+.quote-body {
+  position: relative;
+  margin-bottom: 1.75rem;
+  flex: 1;
+
+  .quote-icon {
+    color: var(--color-gold-400);
+    opacity: 0.4;
+    margin-bottom: 0.75rem;
+  }
+
+  .quote-text {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+    font-style: italic;
+    margin: 0;
+  }
+}
+
+.client-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-surface-border-subtle);
+
+  .initials-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-navy-800), var(--color-navy-950));
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-gold-400);
+  }
+
+  .client-info {
+    display: flex;
+    flex-direction: column;
+
+    .client-name {
+      font-weight: 600;
+      color: var(--color-navy-950);
+      font-size: 0.9rem;
+    }
+
+    .client-loc {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+    }
+  }
+}

@@ -1,0 +1,132 @@
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <span class="badge badge-gold">Privacy & Technical Compliance</span>
+      <h1>Cookie & Tracking Policy</h1>
+      <p>Last Revised: September 2026 • Document Version 1.2</p>
+    </div>
+  </div>
+</section>
+
+<section class="section legal-content-section">
+  <div class="container container-narrow">
+    <div class="legal-notice-callout">
+      <div class="callout-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+      </div>
+      <div class="callout-text">
+        <strong>Privacy Commitment:</strong> We do not deploy invasive third-party ad-tracking cookies. Cookies utilized on this portal serve essential security, encrypted session integrity, and aggregate performance metrics.
+      </div>
+    </div>
+
+    <!-- INTERACTIVE COOKIE CONTROLS -->
+    <div class="cookie-manager-card">
+      <div class="manager-header">
+        <span class="badge badge-blue">Interactive Controls</span>
+        <h3>Manage Your Cookie Preferences</h3>
+        <p>You can adjust non-essential cookies at any time below.</p>
+      </div>
+
+      <div class="cookie-options-list">
+        <!-- Necessary Cookies -->
+        <div class="cookie-opt-row">
+          <div class="opt-info">
+            <div class="opt-title">
+              <strong>Strictly Necessary Cookies</strong>
+              <span class="badge badge-emerald">Always Active</span>
+            </div>
+            <p>Essential for cryptographic intake transmission, CSRF protection, and page navigation security.</p>
+          </div>
+          <div class="opt-toggle">
+            <input type="checkbox" checked disabled id="necessary-cookie" />
+          </div>
+        </div>
+
+        <!-- Analytics Cookies -->
+        <div class="cookie-opt-row">
+          <div class="opt-info">
+            <div class="opt-title">
+              <strong>Anonymized Performance & Telemetry</strong>
+            </div>
+            <p>Aggregated metrics that help us optimize portal load performance without tracking individual identity.</p>
+          </div>
+          <div class="opt-toggle">
+            <button 
+              type="button" 
+              class="toggle-switch" 
+              [class.active]="analyticsEnabled()" 
+              (click)="toggleAnalytics()" 
+              role="switch" 
+              [attr.aria-checked]="analyticsEnabled()">
+              <span class="switch-handle"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Preference Cookies -->
+        <div class="cookie-opt-row">
+          <div class="opt-info">
+            <div class="opt-title">
+              <strong>Functionality & Preferences</strong>
+            </div>
+            <p>Remembers form field status if navigating between case steps during an active session.</p>
+          </div>
+          <div class="opt-toggle">
+            <button 
+              type="button" 
+              class="toggle-switch" 
+              [class.active]="preferencesEnabled()" 
+              (click)="togglePreferences()" 
+              role="switch" 
+              [attr.aria-checked]="preferencesEnabled()">
+              <span class="switch-handle"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="manager-footer">
+        <button type="button" class="btn btn-primary btn-sm" (click)="savePreferences()">
+          Save Cookie Preferences
+        </button>
+        <span class="save-toast" *ngIf="preferencesSaved()">✓ Preferences successfully saved!</span>
+      </div>
+    </div>
+
+    <!-- WRITTEN POLICY -->
+    <div class="legal-document">
+      <h2>1. What Are Cookies?</h2>
+      <p>
+        Cookies are compact data files deposited onto your computer or mobile device when you browse websites. They are universally employed to make web properties operate reliably, remember user state, and provide security authentication.
+      </p>
+
+      <h2>2. Categories of Cookies Employed</h2>
+      <p>Trust Funds Recovery strictly classifies cookies into three operational tiers:</p>
+      <ul>
+        <li><strong>Session Integrity & Security (Strictly Necessary):</strong> These cookies enable secure HTTPS cryptographic connections, prevent cross-site request forgery attacks on intake forms, and verify that you are communicating directly with our authenticated servers.</li>
+        <li><strong>Anonymized Analytical Metrics:</strong> These cookies collect non-identifiable telemetry (such as browser type, page response latency, and intake error rates) to help us ensure our site functions properly across worldwide connections.</li>
+        <li><strong>Session Preferences:</strong> Temporary cookies that recall interface preferences (such as high-contrast display modes or draft form states) while you complete an intake submission.</li>
+      </ul>
+
+      <h2>3. Third-Party Cookies & Marketing Pixels</h2>
+      <p>
+        Given the sensitive nature of financial recovery casework, <strong>we strictly prohibit third-party behavioral advertising pixels (such as social media retargeting tags or third-party ad networks)</strong> from tracking your activity across our domain.
+      </p>
+
+      <h2>4. Managing Cookies Via Your Browser</h2>
+      <p>
+        In addition to the interactive preference toggle provided above, you can configure your browser (Google Chrome, Mozilla Firefox, Apple Safari, Microsoft Edge) to refuse or delete cookies. Please note that disabling strictly necessary security cookies may prevent encrypted intake forms from transmitting successfully.
+      </p>
+
+      <div class="contact-box">
+        <strong>Technical & Privacy Operations</strong><br />
+        Trust Funds Recovery<br />
+        Email: cookies&#64;trustfundsrecovery.com
+      </div>
+    </div>
+  </div>
+</section>
