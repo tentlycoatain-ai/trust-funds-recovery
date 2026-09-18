@@ -59,7 +59,7 @@ import { DialerModalComponent } from '../../../../shared/components/dialer-modal
               <span class="val">\${{ cust.totalClaimAmount | number:'1.0-0' }}</span>
             </div>
             <button class="btn-call" (click)="isDialerOpen.set(true)">
-              📞 Call Claimant
+              <img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" /> Call Claimant
             </button>
           </div>
         </div>
@@ -93,7 +93,7 @@ import { DialerModalComponent } from '../../../../shared/components/dialer-modal
             <div class="docs-list">
               @for (doc of documents(); track doc.id) {
                 <div class="doc-item">
-                  <span class="doc-icon">📄</span>
+                  <span class="doc-icon"><img class="real-icon real-icon-inline" src="/assets/icons/document-folder.png" alt="" aria-hidden="true" /></span>
                   <div class="doc-info">
                     <strong>{{ doc.title }}</strong>
                     <span class="sub">{{ doc.fileName }}</span>

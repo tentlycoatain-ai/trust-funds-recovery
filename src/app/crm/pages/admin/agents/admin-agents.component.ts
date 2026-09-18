@@ -36,11 +36,11 @@ import { ToastService } from '../../../shared/services/toast.service';
 
             <div class="contact-info">
               <div class="contact-item">
-                <span class="icon">✉</span>
+                <span class="icon"><img class="real-icon real-icon-inline" src="/assets/icons/envelope-letter.png" alt="" aria-hidden="true" /></span>
                 <span class="val">{{ agent.email }}</span>
               </div>
               <div class="contact-item">
-                <span class="icon">📞</span>
+                <span class="icon"><img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" /></span>
                 <span class="val">{{ agent.phone }}</span>
               </div>
             </div>
@@ -69,7 +69,7 @@ import { ToastService } from '../../../shared/services/toast.service';
           <div class="modal-card" (click)="$event.stopPropagation()">
             <div class="modal-header">
               <h3>Onboard Recovery Agent</h3>
-              <button class="close-btn" (click)="isCreateModalOpen.set(false)">✕</button>
+              <button class="close-btn" (click)="isCreateModalOpen.set(false)"><img class="real-icon real-icon-inline" src="/assets/icons/close-seal.png" alt="" aria-hidden="true" /></button>
             </div>
             <form (ngSubmit)="submitCreateAgent()" class="modal-form">
               <div class="form-row">

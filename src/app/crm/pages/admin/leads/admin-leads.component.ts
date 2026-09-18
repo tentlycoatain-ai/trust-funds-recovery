@@ -79,11 +79,11 @@ import { ToastService } from '../../../shared/services/toast.service';
 
                       @if (lead.stage === 'contract_signed') {
                         <button class="btn-convert" (click)="convertLead(lead)">
-                          Convert to Client →
+                          Convert to Client <img class="real-icon real-icon-inline" src="/assets/icons/forward-card.png" alt="" aria-hidden="true" />
                         </button>
                       } @else {
                         <button class="btn-advance" (click)="advanceStage(lead)" title="Advance to next pipeline stage">
-                          Advance →
+                          Advance <img class="real-icon real-icon-inline" src="/assets/icons/forward-card.png" alt="" aria-hidden="true" />
                         </button>
                       }
                     </div>
@@ -153,7 +153,7 @@ import { ToastService } from '../../../shared/services/toast.service';
           <div class="modal-card" (click)="$event.stopPropagation()">
             <div class="modal-header">
               <h3>Create New Lead</h3>
-              <button class="close-btn" (click)="isCreateModalOpen.set(false)">✕</button>
+              <button class="close-btn" (click)="isCreateModalOpen.set(false)"><img class="real-icon real-icon-inline" src="/assets/icons/close-seal.png" alt="" aria-hidden="true" /></button>
             </div>
             <form (ngSubmit)="submitCreateLead()" class="modal-form">
               <div class="form-row">

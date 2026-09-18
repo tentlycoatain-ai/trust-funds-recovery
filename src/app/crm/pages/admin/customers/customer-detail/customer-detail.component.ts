@@ -76,7 +76,7 @@ import { DialerModalComponent } from '../../../../shared/components/dialer-modal
               <span class="val">\${{ cust.totalRecoveredAmount | number:'1.0-0' }}</span>
             </div>
             <button class="btn-call-hero" (click)="isDialerOpen.set(true)">
-              📞 Initiate Call
+              <img class="real-icon real-icon-inline" src="/assets/icons/phone-handset.png" alt="" aria-hidden="true" /> Initiate Call
             </button>
           </div>
         </div>
@@ -147,7 +147,7 @@ import { DialerModalComponent } from '../../../../shared/components/dialer-modal
               <div class="docs-grid">
                 @for (doc of documents(); track doc.id) {
                   <div class="doc-card">
-                    <div class="doc-icon">📄</div>
+                    <div class="doc-icon"><img class="real-icon real-icon-inline" src="/assets/icons/document-folder.png" alt="" aria-hidden="true" /></div>
                     <div class="doc-info">
                       <strong>{{ doc.title }}</strong>
                       <span class="file-name">{{ doc.fileName }} ({{ doc.fileSize }})</span>

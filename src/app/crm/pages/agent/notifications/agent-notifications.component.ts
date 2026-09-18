@@ -18,9 +18,7 @@ import { ToastService } from '../../../shared/services/toast.service';
         </div>
         <div class="header-actions">
           <button class="btn-ghost" (click)="markAllRead()" [disabled]="unreadCount() === 0">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
+            <img class="real-icon real-icon-inline" src="/assets/icons/calendar-desk.png" alt="" aria-hidden="true" />
             Mark All Read
           </button>
         </div>
@@ -53,13 +51,13 @@ import { ToastService } from '../../../shared/services/toast.service';
             <div class="notif-icon" [class]="'icon-' + item.type">
               @switch (item.type) {
                 @case ('case_update') {
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  <img class="real-icon real-icon-inline" src="/assets/icons/calendar-desk.png" alt="" aria-hidden="true" />
                 }
                 @case ('task_due') {
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  <img class="real-icon real-icon-inline" src="/assets/icons/calendar-desk.png" alt="" aria-hidden="true" />
                 }
                 @default {
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  <img class="real-icon real-icon-inline" src="/assets/icons/coin-stack.png" alt="" aria-hidden="true" />
                 }
               }
             </div>
@@ -79,9 +77,7 @@ import { ToastService } from '../../../shared/services/toast.service';
           </div>
         } @empty {
           <div class="empty-state">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-            </svg>
+            <img class="real-icon real-icon-inline" src="/assets/icons/coin-stack.png" alt="" aria-hidden="true" />
             <p>No notifications matching this view.</p>
           </div>
         }

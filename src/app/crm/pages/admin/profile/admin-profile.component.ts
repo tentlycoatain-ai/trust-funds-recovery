@@ -21,7 +21,7 @@ import { AgentService } from '../../../core/services/agent.service';
             <div class="profile-avatar-wrap">
               <img [src]="user()?.avatar" [alt]="user()?.name" class="profile-avatar">
               <div class="avatar-badge admin">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <img class="real-icon real-icon-inline" src="/assets/icons/envelope-letter.png" alt="" aria-hidden="true" />
               </div>
             </div>
             <div class="profile-name">{{ user()?.name }}</div>
@@ -39,15 +39,15 @@ import { AgentService } from '../../../core/services/agent.service';
 
           <div class="profile-quick-links">
             <button class="quick-link active" (click)="setSection('personal')">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <img class="real-icon real-icon-inline" src="/assets/icons/shield-lock.png" alt="" aria-hidden="true" />
               Personal Info
             </button>
             <button class="quick-link" (click)="setSection('security')">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <img class="real-icon real-icon-inline" src="/assets/icons/shield-lock.png" alt="" aria-hidden="true" />
               Security
             </button>
             <button class="quick-link" (click)="setSection('preferences')">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 19.07l-1.41 1.41M19.07 19.07l-1.41-1.41M4.93 4.93l-1.41 1.41M22 12h-2M4 12H2M12 22v-2M12 4V2"/></svg>
+              <img class="real-icon real-icon-inline" src="/assets/icons/shield-lock.png" alt="" aria-hidden="true" />
               Preferences
             </button>
           </div>
@@ -60,7 +60,7 @@ import { AgentService } from '../../../core/services/agent.service';
             <div class="section-header">
               <h2 class="section-title">Personal Information</h2>
               <button class="btn btn-primary-sm">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                <img class="real-icon real-icon-inline" src="/assets/icons/coin-stack.png" alt="" aria-hidden="true" />
                 Edit
               </button>
             </div>
@@ -100,7 +100,7 @@ import { AgentService } from '../../../core/services/agent.service';
             <div class="security-items">
               <div class="security-item">
                 <div class="security-item-left">
-                  <div class="security-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                  <div class="security-icon"><img class="real-icon real-icon-inline" src="/assets/icons/shield-lock.png" alt="" aria-hidden="true" /></div>
                   <div>
                     <div class="security-name">Password</div>
                     <div class="security-hint">Last changed 30 days ago</div>
@@ -110,7 +110,7 @@ import { AgentService } from '../../../core/services/agent.service';
               </div>
               <div class="security-item">
                 <div class="security-item-left">
-                  <div class="security-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                  <div class="security-icon"><img class="real-icon real-icon-inline" src="/assets/icons/shield-lock.png" alt="" aria-hidden="true" /></div>
                   <div>
                     <div class="security-name">Two-Factor Authentication</div>
                     <div class="security-hint">Adds an extra layer of security</div>
@@ -123,7 +123,7 @@ import { AgentService } from '../../../core/services/agent.service';
               </div>
               <div class="security-item">
                 <div class="security-item-left">
-                  <div class="security-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10"/><path d="M8 12a4 4 0 0 0 4 4V8a4 4 0 0 0-4 4z"/></svg></div>
+                  <div class="security-icon"><img class="real-icon real-icon-inline" src="/assets/icons/shield-lock.png" alt="" aria-hidden="true" /></div>
                   <div>
                     <div class="security-name">Login Sessions</div>
                     <div class="security-hint">1 active session</div>

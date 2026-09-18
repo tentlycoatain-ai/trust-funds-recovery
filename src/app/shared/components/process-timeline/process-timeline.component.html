@@ -24,9 +24,7 @@
         <!-- Checklist of actions/deliverables if present -->
         <ul *ngIf="showDetails && step.actionItems?.length" class="step-actions">
           <li *ngFor="let action of step.actionItems">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="check-icon">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
+            <img class="real-icon real-icon-inline" src="/assets/icons/coin-stack.png" alt="" aria-hidden="true" />
             <span>{{ action }}</span>
           </li>
         </ul>

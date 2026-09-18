@@ -10,6 +10,9 @@ h1 { font-size: var(--text-display); } h2 { font-size: var(--text-3xl); } h3 { f
 p { margin: 0 0 1rem; color: var(--color-text-secondary); } p:last-child { margin-bottom: 0; }
 a { color: var(--color-blue-600); text-decoration: none; transition: color var(--transition-fast); } a:hover { color: var(--color-blue-700); }
 img, video { display: block; max-width: 100%; } button, input, select, textarea { font: inherit; } button { cursor: pointer; }
+.real-icon-inline { width: 1.15rem; height: 1.15rem; object-fit: contain; flex: 0 0 auto; filter: drop-shadow(0 1px 2px rgba(4, 18, 39, .18)); }
+.btn .real-icon-inline, .nav-item .real-icon-inline, .topbar-action-btn .real-icon-inline, .icon-btn .real-icon-inline { width: 1.25rem; height: 1.25rem; }
+.close-btn .real-icon-inline { width: 1rem; height: 1rem; }
 :focus-visible { outline: 3px solid rgba(58, 134, 232, .7); outline-offset: 3px; }
 ::selection { background: rgba(112, 183, 255, .34); color: var(--color-ink-950); }
 

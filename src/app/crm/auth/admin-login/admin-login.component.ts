@@ -57,7 +57,7 @@ import { AuthService } from '../../core/auth/auth.service';
         </div>
 
         <div class="login-footer">
-          <a routerLink="/agent/login">Switch to Agent Portal →</a>
+          <a routerLink="/agent/login">Switch to Agent Portal <img class="real-icon real-icon-inline" src="/assets/icons/forward-card.png" alt="" aria-hidden="true" /></a>
           <span class="divider">•</span>
           <a routerLink="/">Public Website</a>
         </div>

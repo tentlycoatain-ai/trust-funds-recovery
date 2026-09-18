@@ -18,7 +18,7 @@ import { AgentService } from '../../../core/services/agent.service';
           <p class="page-subtitle">All emails, SMS messages and communications with customers</p>
         </div>
         <button class="btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <img class="real-icon real-icon-inline" src="/assets/icons/envelope-letter.png" alt="" aria-hidden="true" />
           New Communication
         </button>
       </div>
@@ -26,7 +26,7 @@ import { AgentService } from '../../../core/services/agent.service';
       <!-- Filter Bar -->
       <div class="filter-bar">
         <div class="search-box">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <img class="real-icon real-icon-inline" src="/assets/icons/envelope-letter.png" alt="" aria-hidden="true" />
           <input type="text" placeholder="Search communications..." class="search-input" [(ngModel)]="searchTerm" (ngModelChange)="onSearch()">
         </div>
         <div class="filter-chips">
@@ -59,13 +59,13 @@ import { AgentService } from '../../../core/services/agent.service';
                   <div class="type-icon {{ comm.type }}">
                     @switch (comm.type) {
                       @case ('email') {
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <img class="real-icon real-icon-inline" src="/assets/icons/envelope-letter.png" alt="" aria-hidden="true" />
                       }
                       @case ('sms') {
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        <img class="real-icon real-icon-inline" src="/assets/icons/envelope-letter.png" alt="" aria-hidden="true" />
                       }
                       @default {
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72"/></svg>
+                        <img class="real-icon real-icon-inline" src="/assets/icons/envelope-letter.png" alt="" aria-hidden="true" />
                       }
                     }
                     {{ comm.type | titlecase }}
@@ -91,7 +91,7 @@ import { AgentService } from '../../../core/services/agent.service';
 
         @if (filtered().length === 0) {
           <div class="empty-state">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/></svg>
+            <img class="real-icon real-icon-inline" src="/assets/icons/envelope-letter.png" alt="" aria-hidden="true" />
             <p>No communications found</p>
           </div>
         }

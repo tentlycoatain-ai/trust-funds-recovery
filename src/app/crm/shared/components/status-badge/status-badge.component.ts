@@ -4,10 +4,10 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'crm-status-badge',
   standalone: true,
-  imports: [CommonModule],
+    imports: [CommonModule],
   template: `
     <span class="status-badge" [ngClass]="getBadgeClass()">
-      <span class="status-icon" aria-hidden="true">{{ getSymbol() }}</span>
+      <img class="status-icon" [src]="getIconAsset()" alt="" aria-hidden="true" />
       <span>{{ getLabel() }}</span>
     </span>
   `,
@@ -27,7 +27,7 @@ import { CommonModule } from '@angular/common';
       white-space: nowrap;
       text-transform: capitalize;
     }
-    .status-icon { display: inline-flex; width: .9rem; align-items: center; justify-content: center; font-size: .74rem; font-weight: 800; }
+    .status-icon { display: block; width: 1rem; height: 1rem; object-fit: contain; }
     .badge-success { color: var(--color-success-strong); background: var(--color-success-bg); border-color: var(--color-success-border); }
     .badge-info { color: var(--color-info); background: var(--color-info-bg); border-color: var(--color-info-border); }
     .badge-warning { color: var(--color-warning); background: var(--color-warning-bg); border-color: var(--color-warning-border); }
@@ -45,13 +45,13 @@ export class StatusBadgeComponent {
     return this.status ? this.status.replace(/_/g, ' ') : '';
   }
 
-  getSymbol(): string {
+  getIconAsset(): string {
     const status = this.status?.toLowerCase();
-    if (['completed', 'verified', 'contract_signed', 'converted', 'active'].includes(status)) return '✓';
-    if (['urgent', 'high', 'failed', 'rejected', 'unqualified', 'bad_lead', 'overdue'].includes(status)) return '!';
-    if (['pending', 'under_review', 'documents_required', 'assessment', 'processing', 'medium'].includes(status)) return '•';
-    if (['in_progress', 'recovery_processing', 'awaiting_client'].includes(status)) return '↗';
-    return '–';
+    if (['completed', 'verified', 'contract_signed', 'converted', 'active'].includes(status)) return '/assets/icons/verified-stamp.png';
+    if (['urgent', 'high', 'failed', 'rejected', 'unqualified', 'bad_lead', 'overdue'].includes(status)) return '/assets/icons/warning-file.png';
+    if (['pending', 'under_review', 'documents_required', 'assessment', 'processing', 'medium'].includes(status)) return '/assets/icons/calendar-desk.png';
+    if (['in_progress', 'recovery_processing', 'awaiting_client'].includes(status)) return '/assets/icons/forward-card.png';
+    return '/assets/icons/document-folder.png';
   }
 
   getBadgeClass(): string {

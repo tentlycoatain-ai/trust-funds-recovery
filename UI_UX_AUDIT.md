@@ -51,3 +51,9 @@ The editorial photography system has now been extended across every primary publ
 ## Image-based icon system rollout
 
 The generic outline treatment has been replaced in the highest-visibility public and CRM surfaces with a shared image-icon component. Public service cards now use tangible dollar-note, warning-file, payment-card, coin-stack, and document-folder assets. Admin and Agent CRM navigation, dialer, notifications, public-site switch, role switch, and logout controls use the same asset-backed icon vocabulary. Each icon is an actual transparent PNG with a semantic image label, rather than an inline generic line glyph. Remaining inline chevrons and small utility marks are intentionally retained where they function as compact interaction indicators rather than content icons.
+
+## Complete icon migration
+
+The full application icon audit is now complete. All inline SVG elements under `src/app` have been removed, and all emoji/text-symbol icon markers used for calls, documents, messages, checks, arrows, and close controls have been replaced with transparent image assets. The shared image vocabulary now covers currency, payment cards, warnings, coins, evidence folders, phone calls, messages, privacy, scheduling, reports, verification, forward actions, and close actions. Public pages, legal pages, CRM layouts, CRM pages, authentication screens, and shared CRM components now use real image assets for iconography.
+
+Validation: production build passed; unit tests passed 2/2; `svg=0`; audited icon emoji/text-symbol count `0`.

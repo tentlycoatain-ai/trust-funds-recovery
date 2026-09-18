@@ -129,11 +129,13 @@
         line-height: 1.5;
 
         &::before {
-          content: '✓';
+          content: '';
           position: absolute;
           left: 0;
-          color: var(--color-gold-400);
-          font-weight: 700;
+          top: .22rem;
+          width: 1rem;
+          height: 1rem;
+          background: url('/assets/icons/verified-stamp.png') center / contain no-repeat;
         }
       }
     }

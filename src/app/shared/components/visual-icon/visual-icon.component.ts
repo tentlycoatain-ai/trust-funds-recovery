@@ -49,16 +49,16 @@ export class VisualIconComponent {
     lead: '/assets/icons/dollar-note.png',
     case: '/assets/icons/warning-file.png',
     task: '/assets/icons/document-folder.png',
-    call: '/assets/icons/payment-card.png',
+    call: '/assets/icons/phone-handset.png',
     agent: '/assets/icons/document-folder.png',
     payment: '/assets/icons/coin-stack.png',
     document: '/assets/icons/document-folder.png',
     report: '/assets/icons/coin-stack.png',
     audit: '/assets/icons/warning-file.png',
-    settings: '/assets/icons/payment-card.png',
-    notification: '/assets/icons/warning-file.png',
+    settings: '/assets/icons/shield-lock.png',
+    notification: '/assets/icons/envelope-letter.png',
     website: '/assets/icons/document-folder.png',
-    logout: '/assets/icons/payment-card.png',
+    logout: '/assets/icons/shield-lock.png',
     switch: '/assets/icons/document-folder.png'
   };
 
